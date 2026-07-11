@@ -10,6 +10,7 @@ Sitio estático bilingüe (EN principal / ES) para GitHub Pages, diseñado para 
 ├── CNAME               # Dominio personalizado enrykez.com
 └── assets/
     ├── emanuel-hero.jpg     # Foto formal (traje azul) — hero
+    ├── favicon.ico    # favicon
     ├── emanuel-about.jpg    # Foto B/N — sección About
     └── emanuel-contact.jpg  # Foto casual — reserva (no usada aún)
 ```
