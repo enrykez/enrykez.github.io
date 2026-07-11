@@ -1,1 +1,513 @@
-# etellez.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emanuel Téllez Enríquez — Enterprise Software Architect | Tax Compliance & Digital Transformation Technology</title>
+<meta name="description" content="Enterprise Software Architect with 18 years delivering mission-critical systems for Fortune 500 and Fortune Global 500 corporations, NYSE-listed payment platforms, and government institutions. Specialist in Mexico's electronic invoicing (CFDI) ecosystem, tax compliance automation, and enterprise modernization.">
+<meta name="author" content="Emanuel Téllez Enríquez">
+<link rel="canonical" href="https://enrykez.com/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Emanuel Téllez Enríquez — Enterprise Software Architect">
+<meta property="og:description" content="18 years of mission-critical systems for Fortune 500 & Global 500 corporations, payment platforms, and governments. CFDI, tax compliance technology, enterprise modernization.">
+<meta property="og:url" content="https://enrykez.com/">
+<meta property="og:image" content="https://enrykez.com/assets/emanuel-hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Emanuel Téllez Enríquez",
+  "url": "https://enrykez.com",
+  "jobTitle": "Enterprise Software Architect",
+  "description": "Enterprise Software Architect and Digital Transformation Specialist. 18 years of experience in mission-critical systems for Fortune 500 and Fortune Global 500 corporations, payment platforms, and government institutions.",
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Laboratorio Nacional de Informática Avanzada (LANIA)"},
+    {"@type": "CollegeOrUniversity", "name": "Universidad Veracruzana"}
+  ],
+  "knowsAbout": ["Software Architecture", "Tax Compliance Technology", "Electronic Invoicing (CFDI)", "Enterprise Modernization", "Payment Systems (ISO 8583)", "Digital Government"],
+  "sameAs": [
+    "https://www.linkedin.com/in/emanueltellez-enriquez",
+    "https://github.com/etellez",
+    "https://orcid.org/0009-0007-1700-834X",
+    "https://scholar.google.com/citations?user=M4uB7AoAAAAJ",
+    "https://ieeexplore.ieee.org/author/38275044700"
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#0B1D2E;
+  --ink-2:#10283D;
+  --paper:#F5F7F8;
+  --card:#FFFFFF;
+  --text:#24384B;
+  --muted:#5B7185;
+  --accent:#0E7A5E;
+  --accent-soft:#E3F0EB;
+  --amber:#C9932F;
+  --line:#D8E0E5;
+  --line-dark:rgba(255,255,255,.14);
+  --radius:14px;
+  --display:'Archivo',sans-serif;
+  --body:'IBM Plex Sans',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--text);background:var(--paper);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* Language toggle mechanics */
+.es{display:none}
+body.lang-es .es{display:revert}
+body.lang-es .en{display:none}
+span.es,span.en{display:none}
+span.en{display:inline}
+body.lang-es span.es{display:inline}
+body.lang-es span.en{display:none}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.eyebrow .folio{color:var(--amber)}
+h1,h2,h3{font-family:var(--display);color:var(--ink);line-height:1.12;letter-spacing:-.015em}
+h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;margin:10px 0 14px}
+.section{padding:96px 0;border-top:1px solid var(--line)}
+.section-lede{max-width:720px;color:var(--muted);font-size:17.5px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(11,29,46,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--mono);font-size:14px;letter-spacing:.06em;color:#fff;font-weight:500}
+.brand b{color:#7BD4BC;font-weight:500}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:#C4D2DD;font-size:14px;font-weight:500;text-decoration:none}
+.nav-links a:hover{color:#fff}
+.lang-btn{font-family:var(--mono);font-size:12.5px;color:#fff;background:transparent;border:1px solid var(--line-dark);border-radius:999px;padding:7px 14px;cursor:pointer;letter-spacing:.08em}
+.lang-btn:hover{border-color:#7BD4BC;color:#7BD4BC}
+.menu-btn{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,var(--ink) 0%,var(--ink-2) 70%,#123047 100%);color:#DCE6EE;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:88px 0 72px;position:relative}
+.hero h1{color:#fff;font-size:clamp(36px,4.6vw,58px);font-weight:800;margin:18px 0 20px}
+.hero h1 em{font-style:normal;color:#7BD4BC}
+.hero p.sub{font-size:18px;max-width:600px;color:#AEC0CE}
+.hero-ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:15px;padding:14px 26px;border-radius:10px;text-decoration:none;letter-spacing:.01em}
+.btn:hover{text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#0C6A52}
+.btn-ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:#7BD4BC;color:#7BD4BC}
+.hero-photo{position:relative;justify-self:end;width:min(380px,100%)}
+.hero-photo img{border-radius:var(--radius);box-shadow:0 30px 80px rgba(0,0,0,.45);aspect-ratio:3/4;object-fit:cover}
+.hero-photo::after{content:"";position:absolute;inset:auto -14px -14px auto;width:64%;height:64%;border:1px solid rgba(123,212,188,.4);border-radius:var(--radius);z-index:-1}
+
+/* Ledger strip — signature element */
+.ledger{background:var(--ink);border-top:1px solid var(--line-dark);color:#C4D2DD}
+.ledger-rows{display:grid;grid-template-columns:repeat(4,1fr)}
+.ledger-row{padding:26px 22px;border-left:1px solid var(--line-dark)}
+.ledger-row:first-child{border-left:none}
+.ledger-row .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#7A93A6;display:flex;align-items:center;gap:8px}
+.ledger-row .k::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+.ledger-row .v{font-family:var(--display);font-weight:800;font-size:30px;color:#fff;margin-top:6px;letter-spacing:-.01em}
+.ledger-row .d{font-size:13px;color:#8FA5B6;margin-top:2px}
+
+/* EXPERTISE */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.pillar{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px}
+.pillar .tag{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:.1em}
+.pillar h3{font-size:20px;margin:10px 0 10px;font-weight:700}
+.pillar p{font-size:15px;color:var(--muted)}
+.hybrid{margin-top:26px;background:var(--accent-soft);border:1px solid #C4E0D5;border-radius:var(--radius);padding:26px 30px;display:flex;gap:18px;align-items:flex-start}
+.hybrid .seal{font-family:var(--mono);font-size:12px;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:4px 12px;white-space:nowrap;margin-top:3px}
+.hybrid p{font-size:15.5px;color:#1E4A3C}
+
+/* WORK */
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}
+.case{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;gap:12px;position:relative}
+.case.feature{grid-column:1/-1;background:linear-gradient(135deg,#0B1D2E,#123047);border:none;color:#C4D2DD}
+.case.feature h3,.case.feature .metric{color:#fff}
+.case.feature .case-desc{color:#AEC0CE}
+.case-top{display:flex;justify-content:space-between;gap:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+.case-top .folio{color:var(--amber)}
+.case-top .sector{color:var(--muted)}
+.case.feature .case-top .sector{color:#7A93A6}
+.case h3{font-size:21px;font-weight:700}
+.case .metric{font-family:var(--mono);font-size:13.5px;color:var(--accent);font-weight:500}
+.case.feature .metric{color:#7BD4BC}
+.case-desc{font-size:15px;color:var(--muted)}
+.case-tech{font-family:var(--mono);font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px;margin-top:auto}
+.case.feature .case-tech{border-top-color:var(--line-dark);color:#7A93A6}
+
+/* RESEARCH */
+.research-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin-top:44px}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+.paper h3{font-size:20px;margin-bottom:8px}
+.paper .venue{font-family:var(--mono);font-size:12.5px;color:var(--accent);letter-spacing:.06em}
+.paper p{font-size:15px;color:var(--muted);margin-top:10px}
+.profiles{display:flex;flex-direction:column;gap:12px}
+.profile-link{display:flex;justify-content:space-between;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:15px 20px;font-size:14.5px;font-weight:500;color:var(--ink);text-decoration:none}
+.profile-link:hover{border-color:var(--accent);text-decoration:none}
+.profile-link .mono{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.profile-link::after{content:"↗";color:var(--accent)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px;align-items:start;margin-top:44px}
+.about-photo img{border-radius:var(--radius);filter:grayscale(1);aspect-ratio:4/5;object-fit:cover}
+.about-copy p{margin-bottom:16px;font-size:16.5px}
+.edu{margin-top:26px;border-top:1px solid var(--line)}
+.edu-row{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.edu-row .yr{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.edu-row b{color:var(--ink)}
+
+/* TECH */
+.tech-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.tech-group{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.tech-group h3{font-size:15px;font-family:var(--mono);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{font-size:13.5px;font-weight:500;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:7px 13px}
+
+/* CONTACT */
+.contact{background:var(--ink);color:#C4D2DD}
+.contact h2{color:#fff}
+.contact .section-lede{color:#8FA5B6}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:44px;align-items:start}
+.contact-list{display:flex;flex-direction:column;gap:14px}
+.contact-item{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line-dark);border-radius:10px;padding:16px 22px;color:#fff;text-decoration:none;font-weight:500;font-size:15px}
+.contact-item:hover{border-color:#7BD4BC;text-decoration:none}
+.contact-item .mono{font-family:var(--mono);font-size:12.5px;color:#7A93A6}
+.contact-note{border-left:2px solid var(--accent);padding-left:22px;font-size:15.5px;color:#AEC0CE}
+
+footer{background:var(--ink);border-top:1px solid var(--line-dark);padding:26px 0;color:#7A93A6;font-size:13px;font-family:var(--mono)}
+.footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+/* Responsive */
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;padding-top:64px}
+  .hero-photo{justify-self:start}
+  .ledger-rows{grid-template-columns:1fr 1fr}
+  .ledger-row{border-top:1px solid var(--line-dark)}
+  .pillars,.tech-groups{grid-template-columns:1fr}
+  .cases,.research-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--ink);flex-direction:column;align-items:flex-start;padding:20px 28px;gap:18px;border-bottom:1px solid var(--line-dark)}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" style="text-decoration:none">enrykez<b>.com</b></a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="navlinks">
+      <a href="#work"><span class="en">Selected Work</span><span class="es">Proyectos</span></a>
+      <a href="#expertise"><span class="en">Expertise</span><span class="es">Especialidad</span></a>
+      <a href="#research"><span class="en">Research</span><span class="es">Investigación</span></a>
+      <a href="#about"><span class="en">About</span><span class="es">Perfil</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="es">Contacto</span></a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">ES</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow"><span class="folio">EMANUEL TÉLLEZ ENRÍQUEZ</span> · <span class="en">ENTERPRISE SOFTWARE ARCHITECT · MSC COMPUTER SCIENCE</span><span class="es">ARQUITECTO DE SOFTWARE EMPRESARIAL · MAESTRO EN CIENCIAS DE LA COMPUTACIÓN</span></p>
+      <h1>
+        <span class="en">Architecting the systems where <em>finance, tax, and technology</em> meet.</span>
+        <span class="es">Arquitectura de los sistemas donde convergen <em>finanzas, impuestos y tecnología</em>.</span>
+      </h1>
+      <p class="sub">
+        <span class="en">18 years designing and delivering mission-critical platforms for Fortune 500 and Fortune Global 500 corporations, NYSE-listed payment companies, and government institutions — specialized in Mexico's electronic invoicing (CFDI) ecosystem, tax compliance automation, and enterprise software modernization.</span>
+        <span class="es">18 años diseñando y entregando plataformas de misión crítica para corporaciones Fortune 500 y Fortune Global 500, empresas de pagos listadas en NYSE e instituciones de gobierno — especializado en el ecosistema mexicano de facturación electrónica (CFDI), automatización del cumplimiento fiscal y modernización de software empresarial.</span>
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#work"><span class="en">View selected work</span><span class="es">Ver proyectos</span></a>
+        <a class="btn btn-ghost" href="#contact"><span class="en">Get in touch</span><span class="es">Contacto</span></a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/emanuel-hero.jpg" alt="Emanuel Téllez Enríquez, Enterprise Software Architect" width="760" height="1013">
+    </div>
+  </div>
+</header>
+
+<div class="ledger" aria-label="Career metrics">
+  <div class="wrap ledger-rows">
+    <div class="ledger-row">
+      <div class="k"><span class="en">Experience</span><span class="es">Experiencia</span></div>
+      <div class="v">18 <span style="font-size:16px;font-weight:500"><span class="en">years</span><span class="es">años</span></span></div>
+      <div class="d"><span class="en">Enterprise & government systems</span><span class="es">Sistemas empresariales y de gobierno</span></div>
+    </div>
+    <div class="ledger-row">
+      <div class="k"><span class="en">Availability</span><span class="es">Disponibilidad</span></div>
+      <div class="v">99.9%</div>
+      <div class="d"><span class="en">Mission-critical CFDI compliance platforms</span><span class="es">Plataformas críticas de cumplimiento CFDI</span></div>
+    </div>
+    <div class="ledger-row">
+      <div class="k"><span class="en">Documented impact</span><span class="es">Impacto documentado</span></div>
+      <div class="v">~200%</div>
+      <div class="d"><span class="en">Tax collection increase, State of Puebla (INDETEC, 2011)</span><span class="es">Aumento en recaudación, Estado de Puebla (INDETEC, 2011)</span></div>
+    </div>
+    <div class="ledger-row">
+      <div class="k"><span class="en">Research</span><span class="es">Investigación</span></div>
+      <div class="v">IEEE</div>
+      <div class="d"><span class="en">Peer-reviewed publication, indexed in IEEE Xplore</span><span class="es">Publicación arbitrada, indexada en IEEE Xplore</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="expertise">
+  <div class="wrap">
+    <p class="eyebrow reveal"><span class="folio">01</span> / <span class="en">EXPERTISE</span><span class="es">ESPECIALIDAD</span></p>
+    <h2 class="reveal"><span class="en">Three disciplines, one architecture.</span><span class="es">Tres disciplinas, una arquitectura.</span></h2>
+    <p class="section-lede reveal">
+      <span class="en">My work sits at the intersection of enterprise engineering, regulated finance, and public-sector modernization — building systems that must be correct, auditable, and continuously available.</span>
+      <span class="es">Mi trabajo está en la intersección de la ingeniería empresarial, las finanzas reguladas y la modernización del sector público — construyendo sistemas que deben ser correctos, auditables y continuamente disponibles.</span>
+    </p>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <div class="tag">CFDI · SAT · E-INVOICING</div>
+        <h3><span class="en">Tax Compliance Technology</span><span class="es">Tecnología de Cumplimiento Fiscal</span></h3>
+        <p><span class="en">Architecture and delivery of electronic invoicing (CFDI) and digital tax compliance platforms that let Fortune 500 and Fortune Global 500 corporations operate within Mexico's regulatory ecosystem — with 99.9% availability for fiscal operations that cannot stop.</span><span class="es">Arquitectura y entrega de plataformas de facturación electrónica (CFDI) y cumplimiento fiscal digital que permiten a corporaciones Fortune 500 y Fortune Global 500 operar dentro del ecosistema regulatorio mexicano — con 99.9% de disponibilidad para operaciones fiscales que no pueden detenerse.</span></p>
+      </div>
+      <div class="pillar reveal">
+        <div class="tag">LEGACY → CLOUD · AI-ENABLED</div>
+        <h3><span class="en">Enterprise Modernization</span><span class="es">Modernización Empresarial</span></h3>
+        <p><span class="en">Migrating and re-architecting legacy platforms into cloud-native, AI-enabled systems — for banks, insurers, and government agencies — improving performance, maintainability, and decision-making at scale.</span><span class="es">Migración y rearquitectura de plataformas legadas hacia sistemas cloud-native habilitados con IA — para bancos, aseguradoras y agencias de gobierno — mejorando desempeño, mantenibilidad y toma de decisiones a escala.</span></p>
+      </div>
+      <div class="pillar reveal">
+        <div class="tag">ISO 8583 · MFA · BANKING</div>
+        <h3><span class="en">Financial & Payment Systems</span><span class="es">Sistemas Financieros y de Pago</span></h3>
+        <p><span class="en">Design and implementation of ISO 8583 transaction systems and multi-factor authentication for a NYSE-listed global payments platform, plus credit, insurance, and banking systems under global compliance standards.</span><span class="es">Diseño e implementación de sistemas transaccionales ISO 8583 y autenticación multifactor para una plataforma global de pagos listada en NYSE, además de sistemas de crédito, seguros y banca bajo estándares globales de cumplimiento.</span></p>
+      </div>
+    </div>
+    <div class="hybrid reveal">
+      <span class="seal"><span class="en">HYBRID PROFILE</span><span class="es">PERFIL HÍBRIDO</span></span>
+      <p><span class="en"><strong>Technology + Accounting.</strong> I hold dual bachelor's degrees in Computer Systems and Accounting, and formal employer records recognize me as “technical leader and accountant” in governmental accounting. This hybrid expertise — rare in enterprise software — is why governments and multinationals have engaged me for systems where the code must embody the tax law.</span><span class="es"><strong>Tecnología + Contaduría.</strong> Tengo doble licenciatura en Sistemas Computacionales Administrativos y Contaduría, y registros formales de empleadores me reconocen como “líder técnico y contador” en contabilidad gubernamental. Esta especialización híbrida — poco común en software empresarial — es la razón por la que gobiernos y multinacionales me han contratado para sistemas donde el código debe materializar la ley fiscal.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="wrap">
+    <p class="eyebrow reveal"><span class="folio">02</span> / <span class="en">SELECTED WORK</span><span class="es">PROYECTOS SELECCIONADOS</span></p>
+    <h2 class="reveal"><span class="en">Systems that move money, taxes, and trust.</span><span class="es">Sistemas que mueven dinero, impuestos y confianza.</span></h2>
+    <p class="section-lede reveal">
+      <span class="en">A selection of enterprise and government engagements. Certain client names are withheld under confidentiality agreements; sector, scale, and outcomes are stated as documented.</span>
+      <span class="es">Una selección de proyectos empresariales y de gobierno. Algunos nombres de clientes se reservan por acuerdos de confidencialidad; sector, escala y resultados se presentan tal como están documentados.</span>
+    </p>
+    <div class="cases">
+
+      <article class="case feature reveal">
+        <div class="case-top"><span class="folio">CASE 01 · 2025 — PRESENT</span><span class="sector"><span class="en">ELECTRONICS · AUTOMOTIVE · RETAIL</span><span class="es">ELECTRÓNICA · AUTOMOTRIZ · RETAIL</span></span></div>
+        <h3><span class="en">Digital tax compliance at Fortune 500 scale</span><span class="es">Cumplimiento fiscal digital a escala Fortune 500</span></h3>
+        <p class="metric">99.9% <span class="en">service availability · mission-critical fiscal operations in Mexico</span><span class="es">de disponibilidad · operaciones fiscales de misión crítica en México</span></p>
+        <p class="case-desc"><span class="en">Leading the architecture and delivery of electronic invoicing (CFDI) and digital tax compliance solutions for Fortune 500 and Fortune Global 500 corporations in the electronics, automotive, and retail sectors — designing cloud architectures, enforcing engineering quality, and coordinating cross-functional teams under agile delivery.</span><span class="es">Liderazgo de la arquitectura y entrega de soluciones de facturación electrónica (CFDI) y cumplimiento fiscal digital para corporaciones Fortune 500 y Fortune Global 500 en los sectores de electrónica, automotriz y retail — diseñando arquitecturas en la nube, asegurando calidad de ingeniería y coordinando equipos multifuncionales bajo entrega ágil.</span></p>
+        <!-- EVIDENCE SLOT: architecture diagram · availability metrics · recommendation letter (pending NDA clearance for client names) -->
+        <p class="case-tech">.NET 6–10 · C# · SQL Server · MySQL · AWS · DevOps · Agile/Scrum</p>
+      </article>
+
+      <article class="case reveal">
+        <div class="case-top"><span class="folio">CASE 02 · 2021 — 2024</span><span class="sector"><span class="en">GLOBAL PAYMENTS</span><span class="es">PAGOS GLOBALES</span></span></div>
+        <h3><span class="en">ISO 8583 transaction systems for a NYSE-listed payments platform</span><span class="es">Sistemas transaccionales ISO 8583 para plataforma de pagos en NYSE</span></h3>
+        <p class="metric"><span class="en">Secure acquirer–issuer message exchange · Paysafe (NYSE: PSFE)</span><span class="es">Intercambio seguro adquirente–emisor · Paysafe (NYSE: PSFE)</span></p>
+        <p class="case-desc"><span class="en">Designed and implemented ISO 8583 financial transaction systems and multi-factor authentication (Okta) for payment portals, collaborating with global teams on high-security financial applications.</span><span class="es">Diseño e implementación de sistemas transaccionales financieros ISO 8583 y autenticación multifactor (Okta) para portales de pago, colaborando con equipos globales en aplicaciones financieras de alta seguridad.</span></p>
+        <!-- EVIDENCE SLOT: system context diagram · reference letter (Baiju Edachali, Mphasis) -->
+        <p class="case-tech">C# · ASP.NET · MVC · Web API · SQL Server · Okta</p>
+      </article>
+
+      <article class="case reveal">
+        <div class="case-top"><span class="folio">CASE 03 · 2019 — 2021</span><span class="sector"><span class="en">DIGITAL GOVERNMENT</span><span class="es">GOBIERNO DIGITAL</span></span></div>
+        <h3><span class="en">Public-audit platforms for the State of Coahuila</span><span class="es">Plataformas de auditoría pública para el Estado de Coahuila</span></h3>
+        <p class="metric"><span class="en">“Cuenta Pública” & “Auditor” platforms · fiscal transparency & audit automation</span><span class="es">Plataformas “Cuenta Pública” y “Auditor” · transparencia fiscal y automatización de auditoría</span></p>
+        <p class="case-desc"><span class="en">Directed the development of government accounting and public-finance systems for the Superior Audit Office of the State of Coahuila (ASE), leading the full lifecycle from requirements to production. In 2021, the ASE additionally engaged me directly as an independent consultant to continue the same systems.</span><span class="es">Dirigí el desarrollo de sistemas de contabilidad gubernamental y finanzas públicas para la Auditoría Superior del Estado de Coahuila (ASE), liderando el ciclo completo desde requerimientos hasta producción. En 2021, la ASE me contrató además de forma directa como consultor independiente para continuar los mismos sistemas.</span></p>
+        <!-- EVIDENCE SLOT: platform screenshots (public-facing) · employer record “technical leader and accountant” -->
+        <p class="case-tech">C# · ASP.NET Core 3.1 · SQL Server · DevOps</p>
+      </article>
+
+      <article class="case reveal">
+        <div class="case-top"><span class="folio">CASE 04 · 2009 — 2013</span><span class="sector"><span class="en">STATE TAX ADMINISTRATION</span><span class="es">ADMINISTRACIÓN TRIBUTARIA ESTATAL</span></span></div>
+        <h3><span class="en">Integral Tax Modernization Project — State of Puebla</span><span class="es">Proyecto Integral de Modernización Tributaria — Estado de Puebla</span></h3>
+        <p class="metric"><span class="en">~200% collection increase · documented as best practice (INDETEC, Trimestre Fiscal No. 96, 2011)</span><span class="es">~200% de aumento en recaudación · documentado como mejor práctica (INDETEC, Trimestre Fiscal No. 96, 2011)</span></p>
+        <p class="case-desc"><span class="en">Directed all development departments of a statewide tax administration platform over four years, leading the engineering team under daily Scrum. The project was documented by the Puebla State Ministry of Finance as a best practice in tax administration, noting its transferability to other Mexican states.</span><span class="es">Dirigí todos los departamentos de desarrollo de una plataforma estatal de administración tributaria durante cuatro años, liderando al equipo de ingeniería bajo Scrum diario. El proyecto fue documentado por la Secretaría de Finanzas del Estado de Puebla como mejor práctica en administración tributaria, señalando su transferibilidad a otros estados mexicanos.</span></p>
+        <!-- EVIDENCE SLOT: Trimestre Fiscal No.96 pp.91–107 excerpt · 2014 letter (Ing. Rafael B. Vega González, Iqia) -->
+        <p class="case-tech">ASP.NET · SQL Server 2008 R2 · SSRS/SSIS/SSAS · TFS</p>
+      </article>
+
+      <article class="case reveal">
+        <div class="case-top"><span class="folio">CASE 05 · 2013 — 2014</span><span class="sector"><span class="en">PUBLIC REVENUE</span><span class="es">RECAUDACIÓN PÚBLICA</span></span></div>
+        <h3><span class="en">Statewide banking integration for tax payments — Chiapas</span><span class="es">Integración bancaria estatal para pago de impuestos — Chiapas</span></h3>
+        <p class="metric"><span class="en">Head of the Tax Obligations Registry & Control Department, Revenue Direction</span><span class="es">Jefe del Depto. de Registro y Control de Obligaciones, Dirección de Ingresos</span></p>
+        <p class="case-desc"><span class="en">As a public official at the Chiapas Ministry of Finance, led federal and state tax collection administration and implemented the statewide banking-integration system for tax payments, improving collection efficiency and reporting.</span><span class="es">Como funcionario público en la Secretaría de Hacienda de Chiapas, lideré la administración de recaudación federal y estatal e implementé el sistema estatal de integración bancaria para pago de impuestos, mejorando eficiencia y reportes de recaudación.</span></p>
+        <!-- EVIDENCE SLOT: appointment record · system description -->
+        <p class="case-tech"><span class="en">Tax administration · banking integration · team leadership</span><span class="es">Administración tributaria · integración bancaria · liderazgo de equipo</span></p>
+      </article>
+
+      <article class="case reveal">
+        <div class="case-top"><span class="folio">CASE 06 · 2015 — 2016</span><span class="sector"><span class="en">INSURANCE · FORTUNE GLOBAL 500</span><span class="es">SEGUROS · FORTUNE GLOBAL 500</span></span></div>
+        <h3><span class="en">Life-insurance systems under global compliance — Zurich</span><span class="es">Sistemas de seguros de vida bajo cumplimiento global — Zurich</span></h3>
+        <p class="metric"><span class="en">Zurich Insurance Group · Life Systems Direction</span><span class="es">Zurich Insurance Group · Dirección de Sistemas Vida</span></p>
+        <p class="case-desc"><span class="en">On-site systems analyst and developer at Zurich Vida Compañía de Seguros, developing and maintaining credit and insurance systems under Zurich's global compliance and quality standards.</span><span class="es">Analista y desarrollador de sistemas en sitio en Zurich Vida Compañía de Seguros, desarrollando y manteniendo sistemas de crédito y seguros bajo los estándares globales de cumplimiento y calidad de Zurich.</span></p>
+        <!-- EVIDENCE SLOT: assignment letter (Porto Mx staffing) -->
+        <p class="case-tech">ASP.NET · C# · SQL Server · ALM/Quality Center</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="research">
+  <div class="wrap">
+    <p class="eyebrow reveal"><span class="folio">03</span> / <span class="en">RESEARCH & RECOGNITION</span><span class="es">INVESTIGACIÓN Y RECONOCIMIENTO</span></p>
+    <h2 class="reveal"><span class="en">Peer-reviewed foundations, third-party validation.</span><span class="es">Bases arbitradas, validación de terceros.</span></h2>
+    <div class="research-grid">
+      <div>
+        <div class="paper reveal">
+          <p class="venue">IEEE CONGRESS ON EVOLUTIONARY COMPUTATION (CEC) · 2007</p>
+          <h3>“An Ant System with Steps Counter for the Job Shop Scheduling Problem”</h3>
+          <p><span class="en">Co-authored, peer-reviewed research on computational optimization — an enhanced Ant Colony Optimization approach for complex scheduling — presented at IEEE CEC and indexed in IEEE Xplore.</span><span class="es">Investigación arbitrada en coautoría sobre optimización computacional — un enfoque mejorado de Optimización por Colonia de Hormigas para calendarización compleja — presentada en IEEE CEC e indexada en IEEE Xplore.</span></p>
+          <p style="margin-top:14px"><a href="https://ieeexplore.ieee.org/document/4424509" target="_blank" rel="noopener"><span class="en">Read on IEEE Xplore ↗</span><span class="es">Ver en IEEE Xplore ↗</span></a></p>
+        </div>
+        <div class="paper reveal" style="margin-top:22px">
+          <p class="venue">TRIMESTRE FISCAL No. 96 · INDETEC · 2011 · PP. 91–107</p>
+          <h3><span class="en">Puebla tax modernization — documented by third parties</span><span class="es">Modernización tributaria de Puebla — documentada por terceros</span></h3>
+          <p><span class="en">The statewide project I led as Team Leader (2009–2013) was documented as a best practice in tax administration by the Puebla State Ministry of Finance, reporting an approximate 200% increase in tax collection. Indexed in UNAM's CLASE bibliographic database. Official third-party documentation of the project — not an authored publication.</span><span class="es">El proyecto estatal que lideré como Team Leader (2009–2013) fue documentado como mejor práctica en administración tributaria por la Secretaría de Finanzas del Estado de Puebla, reportando un aumento aproximado de 200% en la recaudación. Indexado en la base bibliográfica CLASE de la UNAM. Documentación oficial de terceros sobre el proyecto — no una publicación de autoría propia.</span></p>
+          <p style="margin-top:14px"><a href="https://ru.dgb.unam.mx/items/24ba0649-422d-46c7-8d70-f07ec7eb1b35" target="_blank" rel="noopener"><span class="en">View UNAM repository record ↗</span><span class="es">Ver registro en repositorio UNAM ↗</span></a></p>
+        </div>
+      </div>
+      <div class="profiles reveal">
+        <a class="profile-link" href="https://orcid.org/0009-0007-1700-834X" target="_blank" rel="noopener">ORCID <span class="mono">0009-0007-1700-834X</span></a>
+        <a class="profile-link" href="https://ieeexplore.ieee.org/author/38275044700" target="_blank" rel="noopener">IEEE Author Profile <span class="mono">38275044700</span></a>
+        <a class="profile-link" href="https://scholar.google.com/citations?user=M4uB7AoAAAAJ" target="_blank" rel="noopener">Google Scholar <span class="mono">M4uB7AoAAAAJ</span></a>
+        <a class="profile-link" href="https://www.linkedin.com/in/emanueltellez-enriquez" target="_blank" rel="noopener">LinkedIn <span class="mono">/in/emanueltellez-enriquez</span></a>
+        <a class="profile-link" href="https://github.com/etellez" target="_blank" rel="noopener">GitHub <span class="mono">@etellez</span></a>
+        <div class="paper" style="margin-top:10px">
+          <p class="venue"><span class="en">MEMBERSHIPS & CERTIFICATIONS</span><span class="es">MEMBRESÍAS Y CERTIFICACIONES</span></p>
+          <p style="margin-top:8px"><span class="en">Active Professional Member — Mexican Association of Public Accountants (Colegio Profesional Veracruz Centro, A.C.), since 2020 · Scrum Master Certified (SMC) · Scrum Fundamentals Certified (SFC) — SCRUMstudy · Management 3.0 Foundation Workshop, 2025</span><span class="es">Miembro Profesional Activo — Asociación Mexicana de Contadores Públicos (Colegio Profesional Veracruz Centro, A.C.), desde 2020 · Scrum Master Certified (SMC) · Scrum Fundamentals Certified (SFC) — SCRUMstudy · Management 3.0 Foundation Workshop, 2025</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <p class="eyebrow reveal"><span class="folio">04</span> / <span class="en">ABOUT</span><span class="es">PERFIL</span></p>
+    <h2 class="reveal"><span class="en">Two decades turning regulation into reliable software.</span><span class="es">Dos décadas convirtiendo regulación en software confiable.</span></h2>
+    <div class="about-grid">
+      <div class="about-photo reveal"><img src="assets/emanuel-about.jpg" alt="Emanuel Téllez Enríquez" loading="lazy"></div>
+      <div class="about-copy reveal">
+        <p><span class="en">I am an Enterprise Software Architect and Digital Transformation Specialist. Over 18 years, my work has run through the financial, retail, automotive, and public sectors — from statewide tax administration platforms for Mexican state governments, to life-insurance systems for a Fortune Global 500 insurer, to ISO 8583 payment infrastructure for a NYSE-listed global payments company, to the electronic invoicing (CFDI) compliance platforms that Fortune 500 and Fortune Global 500 corporations rely on to operate in Mexico today.</span><span class="es">Soy Arquitecto de Software Empresarial y Especialista en Transformación Digital. A lo largo de 18 años, mi trabajo ha atravesado los sectores financiero, retail, automotriz y público — desde plataformas estatales de administración tributaria para gobiernos de estados mexicanos, hasta sistemas de seguros de vida para una aseguradora Fortune Global 500, infraestructura de pagos ISO 8583 para una compañía global de pagos listada en NYSE, y las plataformas de cumplimiento de facturación electrónica (CFDI) en las que corporaciones Fortune 500 y Fortune Global 500 confían hoy para operar en México.</span></p>
+        <p><span class="en">What connects these projects is a single thesis: in regulated industries, software is not a support function — it is where compliance actually happens. Designing that software well requires understanding both the engineering and the underlying financial and tax rules. My dual training in computer systems and accounting lets me work on both sides of that line.</span><span class="es">Lo que conecta estos proyectos es una sola tesis: en las industrias reguladas, el software no es una función de soporte — es donde el cumplimiento realmente ocurre. Diseñar bien ese software exige entender tanto la ingeniería como las reglas financieras y fiscales subyacentes. Mi doble formación en sistemas computacionales y contaduría me permite trabajar en ambos lados de esa línea.</span></p>
+        <p><span class="en">Today I lead software development for enterprise tax compliance solutions, mentoring engineering teams and driving cloud modernization and AI adoption across mission-critical fiscal platforms.</span><span class="es">Actualmente lidero el desarrollo de software de soluciones empresariales de cumplimiento fiscal, brindando mentoría a equipos de ingeniería e impulsando la modernización en la nube y la adopción de IA en plataformas fiscales de misión crítica.</span></p>
+        <div class="edu">
+          <div class="edu-row"><span class="yr">2004–2006</span><span><b><span class="en">Master of Science, Computer Science</span><span class="es">Maestría en Ciencias de la Computación</span></b> — Laboratorio Nacional de Informática Avanzada (LANIA)</span></div>
+          <div class="edu-row"><span class="yr">2000–2004</span><span><b><span class="en">B.Sc., Administrative Computer Systems</span><span class="es">Lic. en Sistemas Computacionales Administrativos</span></b> — Universidad Veracruzana</span></div>
+          <div class="edu-row"><span class="yr">2000–2004</span><span><b><span class="en">B.Sc., Accounting</span><span class="es">Lic. en Contaduría</span></b> — Universidad Veracruzana</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="stack">
+  <div class="wrap">
+    <p class="eyebrow reveal"><span class="folio">05</span> / <span class="en">TECHNOLOGY</span><span class="es">TECNOLOGÍA</span></p>
+    <h2 class="reveal"><span class="en">The stack behind the systems.</span><span class="es">El stack detrás de los sistemas.</span></h2>
+    <div class="tech-groups">
+      <div class="tech-group reveal">
+        <h3><span class="en">Platforms & Languages</span><span class="es">Plataformas y Lenguajes</span></h3>
+        <div class="chips"><span class="chip">.NET 6–10</span><span class="chip">C#</span><span class="chip">ASP.NET Core</span><span class="chip">MVC · Web API</span><span class="chip">SQL Server</span><span class="chip">MySQL</span><span class="chip">REST · SOAP</span></div>
+      </div>
+      <div class="tech-group reveal">
+        <h3><span class="en">Cloud & Delivery</span><span class="es">Nube y Entrega</span></h3>
+        <div class="chips"><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">DevOps</span><span class="chip">CI/CD</span><span class="chip">Agile · Scrum</span><span class="chip">Jira · Confluence</span></div>
+      </div>
+      <div class="tech-group reveal">
+        <h3><span class="en">Domain & AI</span><span class="es">Dominio e IA</span></h3>
+        <div class="chips"><span class="chip">CFDI · E-invoicing</span><span class="chip">ISO 8583</span><span class="chip">Okta · MFA</span><span class="chip"><span class="en">Government Accounting</span><span class="es">Contabilidad Gubernamental</span></span><span class="chip"><span class="en">AI Adoption · Copilot</span><span class="es">Adopción de IA · Copilot</span></span><span class="chip"><span class="en">Intelligent Automation</span><span class="es">Automatización Inteligente</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow reveal"><span class="folio">06</span> / <span class="en">CONTACT</span><span class="es">CONTACTO</span></p>
+    <h2 class="reveal"><span class="en">Let's talk about mission-critical systems.</span><span class="es">Hablemos de sistemas de misión crítica.</span></h2>
+    <p class="section-lede reveal"><span class="en">Open to conversations on enterprise architecture, tax compliance technology, digital transformation initiatives, and technical leadership.</span><span class="es">Abierto a conversaciones sobre arquitectura empresarial, tecnología de cumplimiento fiscal, iniciativas de transformación digital y liderazgo técnico.</span></p>
+    <div class="contact-grid">
+      <div class="contact-list reveal">
+        <a class="contact-item" href="mailto:enrykez@yahoo.com.mx"><span class="en">Email</span><span class="es">Correo</span> <span class="mono">enrykez@yahoo.com.mx</span></a>
+        <a class="contact-item" href="https://www.linkedin.com/in/emanueltellez-enriquez" target="_blank" rel="noopener">LinkedIn <span class="mono">/in/emanueltellez-enriquez</span></a>
+        <a class="contact-item" href="https://github.com/etellez" target="_blank" rel="noopener">GitHub <span class="mono">@etellez</span></a>
+        <a class="contact-item" href="https://orcid.org/0009-0007-1700-834X" target="_blank" rel="noopener">ORCID <span class="mono">0009-0007-1700-834X</span></a>
+      </div>
+      <div class="contact-note reveal">
+        <p><span class="en">The fastest way to reach me is by email or LinkedIn. For engagements involving regulated environments, I am glad to discuss references and documented outcomes under the appropriate confidentiality terms.</span><span class="es">La forma más rápida de contactarme es por correo o LinkedIn. Para proyectos en entornos regulados, con gusto puedo compartir referencias y resultados documentados bajo los términos de confidencialidad apropiados.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© 2026 Emanuel Téllez Enríquez · enrykez.com</span>
+    <span><span class="en">Enterprise Software Architecture · Tax Compliance Technology</span><span class="es">Arquitectura de Software Empresarial · Tecnología de Cumplimiento Fiscal</span></span>
+  </div>
+</footer>
+
+<script>
+function setLang(lang){
+  document.body.classList.toggle('lang-es', lang==='es');
+  document.documentElement.lang = lang;
+  document.getElementById('langBtn').textContent = lang==='es' ? 'EN' : 'ES';
+  try{ localStorage.setItem('enrykez-lang', lang); }catch(e){}
+}
+function toggleLang(){
+  setLang(document.body.classList.contains('lang-es') ? 'en' : 'es');
+}
+(function(){
+  var saved = 'en';
+  try{ saved = localStorage.getItem('enrykez-lang') || 'en'; }catch(e){}
+  if(saved==='es') setLang('es');
+})();
+
+/* Scroll reveal */
+(function(){
+  if(!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('on');});
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+
+/* Close mobile menu on link click */
+document.querySelectorAll('#navlinks a').forEach(function(a){
+  a.addEventListener('click', function(){ document.getElementById('navlinks').classList.remove('open'); });
+});
+</script>
+</body>
+</html>
