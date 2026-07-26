@@ -159,6 +159,16 @@ nav{position:sticky;top:0;z-index:50;background:rgba(11,29,46,.92);backdrop-filt
 .profile-link .mono{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .profile-link::after{content:"↗";color:var(--accent)}
 
+/* CREDENTIALS card */
+.cred-card{margin-top:10px}
+.cred-head{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.cred-badge{width:52px;flex:none}
+.cred-list{list-style:none;margin-top:10px}
+.cred-list li{display:flex;flex-direction:column;gap:2px;padding:12px 0;border-bottom:1px solid var(--line)}
+.cred-list li:last-child{border-bottom:none}
+.cred-list .cred-name{font-weight:600;color:var(--ink);font-size:14.5px;line-height:1.45}
+.cred-list .cred-meta{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.03em}
+
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px;align-items:start;margin-top:44px}
 .about-photo img{border-radius:var(--radius);filter:grayscale(1);aspect-ratio:4/5;object-fit:cover}
@@ -205,6 +215,7 @@ footer{background:var(--ink);border-top:1px solid var(--line-dark);padding:26px 
   .ledger-row{border-top:1px solid var(--line-dark)}
   .pillars,.tech-groups{grid-template-columns:1fr}
   .cases,.research-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .cred-badge{width:48px}
   .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--ink);flex-direction:column;align-items:flex-start;padding:20px 28px;gap:18px;border-bottom:1px solid var(--line-dark)}
   .nav-links.open{display:flex}
   .menu-btn{display:block}
@@ -341,7 +352,7 @@ footer{background:var(--ink);border-top:1px solid var(--line-dark);padding:26px 
         <h3><span class="en">Public-audit platforms for the State of Coahuila</span><span class="es">Plataformas de auditoría pública para el Estado de Coahuila</span></h3>
         <p class="metric"><span class="en">“Cuenta Pública” & “Auditor” platforms · fiscal transparency & audit automation</span><span class="es">Plataformas “Cuenta Pública” y “Auditor” · transparencia fiscal y automatización de auditoría</span></p>
         <p class="case-desc"><span class="en">Directed the development of government accounting and public-finance systems for the Superior Audit Office of the State of Coahuila (ASE), leading the full lifecycle from requirements to production. In 2021, the ASE additionally engaged me directly as an independent consultant to continue the same systems.</span><span class="es">Dirigí el desarrollo de sistemas de contabilidad gubernamental y finanzas públicas para la Auditoría Superior del Estado de Coahuila (ASE), liderando el ciclo completo desde requerimientos hasta producción. En 2021, la ASE me contrató además de forma directa como consultor independiente para continuar los mismos sistemas.</span></p>
-        <!-- EVIDENCE SLOT: platform screenshots (public-facing) · employer record “technical leader and accountant” -->
+        <!-- EVIDENCE SLOT: platform screenshots (public-facing) · employer record "technical leader and accountant" -->
         <p class="case-tech">C# · ASP.NET Core 3.1 · SQL Server · DevOps</p>
       </article>
 
@@ -401,9 +412,29 @@ footer{background:var(--ink);border-top:1px solid var(--line-dark);padding:26px 
         <a class="profile-link" href="https://scholar.google.com/citations?user=M4uB7AoAAAAJ" target="_blank" rel="noopener">Google Scholar <span class="mono">M4uB7AoAAAAJ</span></a>
         <a class="profile-link" href="https://www.linkedin.com/in/emanuel-tellez-enriquez" target="_blank" rel="noopener">LinkedIn <span class="mono">/in/emanuel-tellez-enriquez</span></a>
         <a class="profile-link" href="https://github.com/enrykez" target="_blank" rel="noopener">GitHub <span class="mono">@enrykez</span></a>
-        <div class="paper" style="margin-top:10px">
-          <p class="venue"><span class="en">MEMBERSHIPS & CERTIFICATIONS</span><span class="es">MEMBRESÍAS Y CERTIFICACIONES</span></p>
-          <p style="margin-top:8px"><span class="en">Active Professional Member — Mexican Association of Public Accountants (Colegio Profesional Veracruz Centro, A.C.), since 2020 · Scrum Master Certified (SMC) · Scrum Fundamentals Certified (SFC) — SCRUMstudy · Management 3.0 Foundation Workshop, 2025</span><span class="es">Miembro Profesional Activo — Asociación Mexicana de Contadores Públicos (Colegio Profesional Veracruz Centro, A.C.), desde 2020 · Scrum Master Certified (SMC) · Scrum Fundamentals Certified (SFC) — SCRUMstudy · Management 3.0 Foundation Workshop, 2025</span></p>
+        <div class="paper cred-card">
+          <div class="cred-head">
+            <img class="cred-badge" src="assets/smc-badge.png" alt="Scrum Master Certified (SMC) badge — SCRUMstudy" loading="lazy">
+            <p class="venue"><span class="en">MEMBERSHIPS &amp; CERTIFICATIONS</span><span class="es">MEMBRESÍAS Y CERTIFICACIONES</span></p>
+          </div>
+          <ul class="cred-list">
+            <li>
+              <span class="cred-name"><span class="en">Active Professional Member — Asociación Mexicana de Contadores Públicos Colegio Profesional Veracruz-Centro A.C. (Mexican Association of Public Accountants)</span><span class="es">Miembro Profesional Activo — Asociación Mexicana de Contadores Públicos Colegio Profesional Veracruz-Centro A.C.</span></span>
+              <span class="cred-meta"><span class="en">Since 2020 · Credential no. 326</span><span class="es">Desde 2020 · Credencial no. 326</span></span>
+            </li>
+            <li>
+              <span class="cred-name">Scrum Master Certified (SMC®)</span>
+              <span class="cred-meta">SCRUMstudy · 2024</span>
+            </li>
+            <li>
+              <span class="cred-name">Scrum Fundamentals Certified (SFC™)</span>
+              <span class="cred-meta">SCRUMstudy · 2024</span>
+            </li>
+            <li>
+              <span class="cred-name">Management 3.0 Foundation Workshop</span>
+              <span class="cred-meta">Management 3.0 · 2025</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
