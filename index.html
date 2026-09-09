@@ -158,7 +158,8 @@ nav{position:sticky;top:0;z-index:60;background:rgba(1,39,56,.86);backdrop-filte
 .work-impact{font-family:var(--display);font-weight:600;font-size:15px;color:var(--brand-glow);margin-bottom:12px}
 .work-body p{font-size:15.5px;color:#AFC8D4;font-weight:300;margin-bottom:16px;max-width:68ch}
 .work-tech{display:flex;flex-wrap:wrap;gap:8px}
-.work-tech span{font-family:var(--display);font-size:12.5px;font-weight:500;color:#BcD7E2;background:rgba(255,255,255,.06);border:1px solid var(--line-dark);border-radius:6px;padding:5px 11px}
+.work-tech>span{font-family:var(--display);font-size:12.5px;font-weight:500;color:#BcD7E2;background:rgba(255,255,255,.06);border:1px solid var(--line-dark);border-radius:6px;padding:5px 11px}
+.work-tech>span .en,.work-tech>span .es{background:none;border:none;padding:0}
 .work-note{max-width:760px;margin:28px auto 0;text-align:center;font-size:13.5px;color:#7F9BAA;font-weight:300}
 
 /* RESEARCH */
@@ -477,7 +478,7 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
           <p class="work-impact"><span class="en">Head of the Tax Obligations Registry & Control Department, Revenue Direction</span><span class="es">Jefe del Depto. de Registro y Control de Obligaciones, Dirección de Ingresos</span></p>
           <p><span class="en">As a public official at the Chiapas Ministry of Finance, led federal and state tax collection administration and implemented the statewide banking-integration system for tax payments, improving collection efficiency and reporting.</span><span class="es">Como funcionario público en la Secretaría de Hacienda de Chiapas, lideré la administración de recaudación federal y estatal e implementé el sistema estatal de integración bancaria para pago de impuestos, mejorando eficiencia y reportes de recaudación.</span></p>
           <!-- EVIDENCE SLOT: appointment record · system description -->
-          <div class="work-tech"><span><span class="en">Tax administration</span><span class="es">Administración tributaria</span></span><span><span class="en">Banking integration</span><span class="es">Integración bancaria</span></span><span><span class="en">Team leadership</span><span class="es">Liderazgo de equipo</span></span></div>
+          <div class="work-tech"><span class="chip-t"><span class="en">Tax administration</span><span class="es">Administración tributaria</span></span><span class="chip-t"><span class="en">Banking integration</span><span class="es">Integración bancaria</span></span><span class="chip-t"><span class="en">Team leadership</span><span class="es">Liderazgo de equipo</span></span></div>
         </div>
       </article>
 
