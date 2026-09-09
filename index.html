@@ -175,6 +175,17 @@ nav{position:sticky;top:0;z-index:60;background:rgba(1,39,56,.86);backdrop-filte
 .profile-link:hover{border-color:var(--brand);text-decoration:none;transform:translateX(3px)}
 .profile-link .id{font-family:var(--body);font-weight:300;font-size:12.5px;color:var(--muted)}
 
+/* CERT BADGE STRIP */
+.badge-strip{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:44px}
+.badge-tile{display:flex;align-items:center;gap:16px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px 22px;text-decoration:none;transition:border-color .2s,transform .2s;flex:1 1 260px;min-width:0}
+.badge-tile:hover{border-color:var(--brand);transform:translateY(-2px);text-decoration:none}
+.badge-tile img{width:64px;height:64px;object-fit:contain;flex:none}
+.badge-tile .bt-txt{display:flex;flex-direction:column;gap:3px;min-width:0}
+.badge-tile .bt-name{font-family:var(--display);font-weight:600;font-size:15px;color:var(--ink);line-height:1.3}
+.badge-tile .bt-org{font-family:var(--body);font-weight:300;font-size:12.5px;color:var(--muted)}
+.badge-tile.verifiable .bt-name::after{content:" ↗";color:var(--brand);font-size:.85em}
+@media(max-width:1000px){.badge-tile{flex:1 1 100%}.badge-tile img{width:56px;height:56px}}
+
 /* CREDENTIALS */
 .cred-card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px 30px;margin-top:22px}
 .cred-card .venue{font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.05em;color:var(--brand);text-transform:uppercase;margin-bottom:6px}
@@ -506,6 +517,22 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
     <div class="section-head reveal">
       <span class="kicker"><span class="en">Research & Recognition</span><span class="es">Investigación y Reconocimiento</span></span>
       <h2><span class="en">Peer-reviewed foundations, third-party validation</span><span class="es">Bases arbitradas, validación de terceros</span></h2>
+    </div>
+    <div class="badge-strip reveal">
+      <a class="badge-tile verifiable" href="https://www.credly.com/badges/b93ae655-e428-44e6-885d-d0d0f56804da/" target="_blank" rel="noopener">
+        <img src="assets/google-genai-badge.png" alt="Google Cloud Certified — Generative AI Leader badge">
+        <span class="bt-txt">
+          <span class="bt-name">Google Cloud Certified — Generative AI Leader</span>
+          <span class="bt-org">Google Cloud · 2026</span>
+        </span>
+      </a>
+      <a class="badge-tile verifiable" href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumMasterCertified-EmanuelTellezEnriquez-1023445.pdf" target="_blank" rel="noopener">
+        <img src="assets/smc-badge.png" alt="Scrum Master Certified (SMC) badge — SCRUMstudy">
+        <span class="bt-txt">
+          <span class="bt-name">Scrum Master Certified (SMC®)</span>
+          <span class="bt-org">SCRUMstudy · 2024</span>
+        </span>
+      </a>
     </div>
     <div class="research-grid">
       <div class="reveal">
