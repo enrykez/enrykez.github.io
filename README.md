@@ -14,7 +14,8 @@ Sitio estático bilingüe (EN principal / ES) publicado con GitHub Pages. Posici
 └── assets/
     ├── emanuel-hero-600.webp · emanuel-hero-1086.webp  # Foto hero (WebP responsivo)
     ├── emanuel-hero.png         # Respaldo del hero para navegadores sin WebP
-    ├── emanuel-about.jpg        # Foto B/N — sección About
+    ├── emanuel-about-casual.webp · .jpg  # Foto About (tono atenuado hacia la paleta)
+    ├── emanuel-about.jpg        # Foto B/N formal — reserva (no usada)
     ├── og-enrykez.jpg           # Imagen para compartir (Open Graph 1200×630)
     ├── enrykez-symbol-*.png     # Símbolo de marca (white / brand / gray)
     ├── favicon.ico · favicon-32.png · apple-touch-icon.png
@@ -73,3 +74,12 @@ GitHub Pages publica desde `main` / raíz: **cada push a `main` sale en vivo**.
 - Rendimiento: hero en WebP responsivo (`<picture>` + `srcset`) con `preload` y `fetchpriority="high"`; respaldo PNG optimizado. Al agregar imágenes: WebP + respaldo, ancho máximo = 2× el tamaño mostrado.
 - Accesibilidad: foco visible, `prefers-reduced-motion` respetado, contraste AA, alt text en fotos, SVG decorativos con `aria-hidden`.
 - Responsive mobile-first; menú hamburguesa < 1000px.
+
+## Guiños personales (intencionalmente discretos)
+
+No son decoración genérica: cada uno refiere a algo de Emanuel. Mantenerlos sutiles (opacidad baja, sin texto explicativo visible).
+
+- **Constelación de Acuario** en el fondo del hero (geometría de la figura clásica) y glifo ♒ en el footer.
+- **Caballo de ajedrez** como marca de agua en *Selected Work*.
+- **Hormigas** sobre una línea de feromona en la tarjeta del artículo IEEE (*An Ant System with Steps Counter*); caminan al pasar el cursor.
+- **Mensaje en la consola** del navegador para quien inspeccione el sitio.
