@@ -48,6 +48,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Integra",
+  "url": "https://in-tegra.com.mx",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Management platform for professional associations and professional colleges: member registry, dues and online payments, courses and continuing-education hours, certifications, and certificates verifiable by QR.",
+  "author": {"@type": "Person", "name": "Emanuel Téllez Enríquez", "url": "https://enrykez.com"}
+}
+</script>
 <style>
 :root{
   --brand:#00628D;
@@ -172,6 +184,33 @@ nav{position:sticky;top:0;z-index:60;background:rgba(1,39,56,.86);backdrop-filte
 .work-tech>span .en,.work-tech>span .es{background:none;border:none;padding:0}
 .work-note{max-width:760px;margin:28px auto 0;text-align:center;font-size:13.5px;color:#7F9BAA;font-weight:300}
 
+/* PRODUCTS — own products; each .product is a feature row, image side alternates */
+.products{background:var(--paper-2)}
+.product-list{display:flex;flex-direction:column;gap:32px}
+.product{display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:start;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:36px}
+.product:nth-child(even) .product-shot{order:2}
+.product-shot{margin:0}
+.product-shot img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);box-shadow:0 18px 40px -22px rgba(1,39,56,.45)}
+.product-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.product-name{margin:0;line-height:0}
+.product-name img{height:46px;width:auto}
+.product-status{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--brand-deep);background:var(--paper-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px}
+.product-status::before{content:"";width:7px;height:7px;border-radius:50%;background:#1E9E6A}
+.product-body .product-sub{font-family:var(--display);color:var(--ink);font-size:19px;font-weight:600;margin-bottom:12px;line-height:1.35}
+.product-body>p{font-size:15.5px;color:var(--muted);font-weight:300;margin-bottom:14px}
+.product-body .product-role{font-size:14.5px;color:var(--text);margin-bottom:16px}
+.product-role b{font-family:var(--display);font-weight:600;color:var(--ink)}
+.product-points{list-style:none;margin:0 0 20px;display:flex;flex-direction:column;gap:8px}
+.product-points li{position:relative;padding-left:22px;font-size:14.5px;color:var(--text);font-weight:300;line-height:1.55}
+.product-points li::before{content:"";position:absolute;left:2px;top:.62em;width:9px;height:9px;border:2px solid var(--brand);border-radius:2px;transform:rotate(45deg)}
+.product-tech{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:26px}
+.product-tech span{font-family:var(--display);font-size:12.5px;font-weight:500;color:var(--brand-deep);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:4px 10px}
+.product-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-brand{background:var(--brand);color:#fff}
+.btn-brand:hover{background:var(--brand-deep);color:#fff}
+.btn-outline{border:1px solid var(--brand);color:var(--brand)}
+.btn-outline:hover{background:var(--paper-2);color:var(--brand-deep)}
+
 /* RESEARCH */
 .research-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
 .paper{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:34px}
@@ -265,6 +304,8 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
   .metric-cell:nth-child(3),.metric-cell:nth-child(4){border-top:1px solid var(--line-dark)}
   .exp-grid,.tech-groups{grid-template-columns:1fr}
   .research-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .product{grid-template-columns:1fr;gap:26px;padding:26px}
+  .product:nth-child(even) .product-shot{order:0}
   .about-photo{max-width:380px}
   .work-item{grid-template-columns:1fr;gap:14px}
   .hybrid{flex-direction:column;text-align:center}
@@ -278,6 +319,9 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
   .metrics-inner{grid-template-columns:1fr}
   .metric-cell{border-left:none;border-top:1px solid var(--line-dark)}
   .metric-cell:first-child{border-top:none}
+  .product{padding:18px;border-radius:14px}
+  .product-name img{height:40px}
+  .product-ctas .btn{flex:1 1 100%;justify-content:center}
 }
 </style>
 </head>
@@ -294,6 +338,7 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
     <div class="nav-links" id="navlinks">
       <a href="#expertise"><span class="en">Expertise</span><span class="es">Especialidad</span></a>
       <a href="#work"><span class="en">Selected Work</span><span class="es">Proyectos</span></a>
+      <a href="#products"><span class="en">Products</span><span class="es">Productos</span></a>
       <a href="#research"><span class="en">Research</span><span class="es">Investigación</span></a>
       <a href="#about"><span class="en">About</span><span class="es">Perfil</span></a>
       <a href="#contact"><span class="en">Contact</span><span class="es">Contacto</span></a>
@@ -516,6 +561,49 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
           <p><span class="en">On-site systems analyst and developer at Zurich Vida Compañía de Seguros, developing and maintaining credit and insurance systems under Zurich's global compliance and quality standards.</span><span class="es">Analista y desarrollador de sistemas en sitio en Zurich Vida Compañía de Seguros, desarrollando y manteniendo sistemas de crédito y seguros bajo los estándares globales de cumplimiento y calidad de Zurich.</span></p>
           <!-- EVIDENCE SLOT: assignment letter (Porto Mx staffing) -->
           <div class="work-tech"><span>ASP.NET</span><span>C#</span><span>SQL Server</span><span>ALM/Quality Center</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section products" id="products">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker"><span class="en">Products</span><span class="es">Productos</span></span>
+      <h2><span class="en">Software I conceive, build, and operate</span><span class="es">Software que concibo, construyo y opero</span></h2>
+      <p class="lede"><span class="en">Beyond client engagements, I design and run my own products end to end — from the first concept and the architecture to production.</span><span class="es">Además de los proyectos para clientes, diseño y opero productos propios de principio a fin — desde la idea y la arquitectura hasta la producción.</span></p>
+    </div>
+    <div class="product-list">
+
+      <!-- PRODUCT: Integra · only link allowed is the presentation site (no app subdomains, no client names, no user counts) -->
+      <article class="product reveal" id="product-integra">
+        <figure class="product-shot">
+          <picture>
+            <source type="image/webp" srcset="assets/integra/tablero-800.webp 800w, assets/integra/tablero-1440.webp 1440w" sizes="(max-width:1000px) 92vw, 640px">
+            <img src="assets/integra/tablero.png" alt="Tablero de Integra con datos de demostración" width="1440" height="900" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <div class="product-body">
+          <div class="product-top">
+            <h3 class="product-name"><img src="assets/integra/integra-logo.png" alt="Integra" width="118" height="46"></h3>
+            <span class="product-status"><span class="en">In production · 2026</span><span class="es">En producción · 2026</span></span>
+          </div>
+          <p class="product-sub"><span class="en">Management platform for professional associations and professional colleges</span><span class="es">Plataforma para la administración de asociaciones y colegios profesionales</span></p>
+          <p><span class="en">Brings together the member registry, dues and online payments, courses with attendance and continuing-education hours, certifications, and certificates with public QR verification. Each association runs on its own installation, with its own database.</span><span class="es">Reúne en un solo lugar el padrón de socios, las cuotas y los pagos en línea, los cursos con su asistencia y horas de educación continua, las certificaciones y las constancias con verificación pública por QR. Cada asociación trabaja en su propia instalación, con su propia base de datos.</span></p>
+          <p class="product-role"><b><span class="en">My role:</span><span class="es">Mi papel:</span></b> <span class="en">Concept, architecture, development, and deployment.</span><span class="es">Concepción, arquitectura, desarrollo y despliegue.</span></p>
+          <ul class="product-points">
+            <li><span class="en">Certificates and credentials with a digital seal and public QR verification.</span><span class="es">Constancias y credenciales con sello digital y verificación pública por QR.</span></li>
+            <li><span class="en">Two-step verification, role-based permissions, and usage logs.</span><span class="es">Verificación en dos pasos, permisos por rol y bitácoras de uso.</span></li>
+            <li><span class="en">Versioned legal documents with a record of acceptances.</span><span class="es">Documentos legales versionados con registro de aceptaciones.</span></li>
+            <li><span class="en">Member portal designed for mobile.</span><span class="es">Portal del socio diseñado para el celular.</span></li>
+          </ul>
+          <div class="product-tech"><span>ASP.NET Core 8</span><span>Entity Framework Core</span><span>MySQL / MariaDB</span><span>Hangfire</span><span>QuestPDF</span><span>Mercado Pago</span><span>Bootstrap 5</span></div>
+          <div class="product-ctas">
+            <a class="btn btn-brand" href="https://in-tegra.com.mx" target="_blank" rel="noopener noreferrer"><span class="en">Explore Integra</span><span class="es">Conocer Integra</span></a>
+            <a class="btn btn-outline" href="https://in-tegra.com.mx/#contacto" target="_blank" rel="noopener noreferrer"><span class="en">Request a demo</span><span class="es">Solicitar una demostración</span></a>
+          </div>
         </div>
       </article>
 
