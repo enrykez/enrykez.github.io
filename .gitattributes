@@ -1,0 +1,20 @@
+# Normalize text files to LF in the repository; Git converts to the
+# platform's line ending on checkout. Prevents phantom whole-file diffs
+# between Windows and Linux/macOS working copies.
+* text=auto
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+*.xml  text eol=lf
+*.txt  text eol=lf
+CNAME  text eol=lf
+
+# Binary assets
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.avif binary
+*.ico  binary
+*.pdf  binary

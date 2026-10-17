@@ -1,28 +1,43 @@
 # enrykez.com — Sitio profesional de Emanuel Téllez Enríquez
 
-Sitio estático bilingüe (EN principal / ES) para GitHub Pages, diseñado para posicionamiento como líder tecnológico STEM: arquitectura de software empresarial, tecnología de cumplimiento fiscal (CFDI) y transformación digital.
+Sitio estático bilingüe (EN principal / ES) publicado con GitHub Pages. Posiciona a Emanuel como Enterprise Software Architect: arquitectura de software empresarial, tecnología de cumplimiento fiscal (CFDI) y modernización digital.
 
 ## Estructura
 
 ```
 /
-├── index.html          # Sitio completo (HTML + CSS + JS autocontenido)
-├── CNAME               # Dominio personalizado enrykez.com
+├── index.html               # Sitio completo (HTML + CSS + JS autocontenido)
+├── 404.html                 # Página de error de GitHub Pages
+├── robots.txt · sitemap.xml # Indexado
+├── CNAME                    # Dominio personalizado enrykez.com — NO modificar
+├── .gitattributes           # Normaliza finales de línea (LF) entre Windows y Linux
 └── assets/
-    ├── emanuel-hero.jpg     # Foto formal (traje azul) — hero
-    ├── favicon.ico    # favicon
-    ├── emanuel-about.jpg    # Foto B/N — sección About
-    └── emanuel-contact.jpg  # Foto casual — reserva (no usada aún)
+    ├── emanuel-hero-600.webp · emanuel-hero-1086.webp  # Foto hero (WebP responsivo)
+    ├── emanuel-hero.png         # Respaldo del hero para navegadores sin WebP
+    ├── emanuel-about.jpg        # Foto B/N — sección About
+    ├── og-enrykez.jpg           # Imagen para compartir (Open Graph 1200×630)
+    ├── enrykez-symbol-*.png     # Símbolo de marca (white / brand / gray)
+    ├── favicon.ico · favicon-32.png · apple-touch-icon.png
+    ├── google-genai-badge.png · smc-badge.png   # Badges de certificación
+    └── emanuel-hero.jpg · emanuel-contact.jpg   # Reserva (no usadas)
 ```
 
-## Despliegue en GitHub Pages
+## Flujo de trabajo
 
-1. Subir todos los archivos a la raíz del repositorio `etellez/etellez.github.io` (rama `main`), reemplazando el `index.html` actual.
-2. En Settings → Pages, verificar Source = `main` / root.
-3. Configurar el dominio: en Settings → Pages → Custom domain, escribir `enrykez.com` (el archivo CNAME ya lo fija). Activar "Enforce HTTPS" cuando el certificado esté listo.
-4. En el proveedor DNS de enrykez.com:
-   - Registros A del apex (`enrykez.com`) → 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
-   - CNAME de `www` → `etellez.github.io`
+GitHub Pages publica desde `main` / raíz: **cada push a `main` sale en vivo**.
+
+1. `git pull` antes de empezar.
+2. Previsualizar localmente: `python -m http.server 8000` → http://localhost:8000
+3. Commits con mensaje descriptivo (`feat:`, `fix:`, `perf:`, `docs:`).
+4. `git push` → publicación en 1–2 minutos.
+
+## Despliegue y dominio
+
+- Repositorio: `enrykez/enrykez.github.io`, rama `main`, carpeta raíz.
+- Settings → Pages → Custom domain: `enrykez.com`, con **Enforce HTTPS** activo.
+- DNS:
+  - Registros A del apex (`enrykez.com`) → 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
+  - CNAME de `www` → `enrykez.github.io`
 
 ## Reglas de contenido (NO modificar sin cotejar con la conciliación vigente)
 
@@ -31,9 +46,10 @@ Sitio estático bilingüe (EN principal / ES) para GitHub Pages, diseñado para 
 - "CITI (Value in Real Time)" no se menciona por nombre en el sitio (el caso ASE Coahuila se presenta por el cliente gubernamental, no por la consultora) — evita cualquier confusión con Citigroup ante un revisor.
 - El rol TecNM ("invited instructor / course facilitator") no se incluye en el sitio; vive en LinkedIn y el CV.
 - El Trimestre Fiscal No. 96 se presenta explícitamente como "documented by third parties — not an authored publication".
-- Toda cifra (18 años, 99.9%, ~200%) proviene del CV calibrado contra evidencia documental.
+- Toda cifra (18 años, 99.9%, ~200%) proviene del CV calibrado contra evidencia documental. Las frases de antigüedad usan "nearly two decades / casi dos décadas", nunca "two decades".
+- Cada badge corresponde exactamente a su credencial; si no hay badge oficial, no se muestra ninguno.
 
-## Fase 2 — Materiales por recopilar (slots ya preparados en el HTML como comentarios `EVIDENCE SLOT`)
+## Fase 2 — Materiales por recopilar (slots preparados en el HTML como comentarios `EVIDENCE SLOT`)
 
 **Case 01 — CFDI (SW sapien):** diagrama de arquitectura cloud (genérico, sin datos de cliente) · captura de métricas de disponibilidad · carta de Valeri Herrera · nombres de clientes cuando el NDA lo permita.
 
@@ -47,12 +63,13 @@ Sitio estático bilingüe (EN principal / ES) para GitHub Pages, diseñado para 
 
 **Case 06 — Zurich:** carta de asignación vía Porto Mx.
 
-**Generales:** logotipos oficiales SVG de tecnologías (hoy son chips tipográficos — más seguros legalmente; si se desean logos, verificar guidelines de marca de cada fabricante) · video de presentación (opcional) · testimonios con permiso escrito.
+**Generales:** logotipos oficiales SVG de tecnologías (hoy son chips tipográficos — más seguros legalmente; si se desean logos, verificar guidelines de marca de cada fabricante) · video de presentación (opcional) · testimonios con permiso escrito · badge oficial de Scrum Fundamentals Certified (SFC).
 
 ## Notas técnicas
 
-- Selector de idioma EN/ES con persistencia (localStorage con try/catch).
-- SEO: meta description, Open Graph, canonical, JSON-LD schema.org/Person con sameAs hacia ORCID, IEEE, Scholar, LinkedIn y GitHub.
-- Accesibilidad: foco visible, `prefers-reduced-motion` respetado, contraste AA, alt text en fotos.
-- Responsive mobile-first; menú hamburguesa < 980px.
-- Sin dependencias externas salvo Google Fonts (Archivo, IBM Plex Sans, IBM Plex Mono).
+- Tipografía: Exo 2 (display) y Prompt (texto) vía Google Fonts — única dependencia externa.
+- Selector de idioma EN/ES con persistencia (`localStorage` con try/catch); el idioma guardado se aplica al inicio del `<body>` para evitar el parpadeo EN→ES.
+- SEO: meta description, Open Graph con imagen dedicada 1200×630, Twitter card, canonical, JSON-LD schema.org/Person con `sameAs` hacia ORCID, IEEE, Scholar, LinkedIn y GitHub; `robots.txt` y `sitemap.xml`.
+- Rendimiento: hero en WebP responsivo (`<picture>` + `srcset`) con `preload` y `fetchpriority="high"`; respaldo PNG optimizado. Al agregar imágenes: WebP + respaldo, ancho máximo = 2× el tamaño mostrado.
+- Accesibilidad: foco visible, `prefers-reduced-motion` respetado, contraste AA, alt text en fotos, SVG decorativos con `aria-hidden`.
+- Responsive mobile-first; menú hamburguesa < 1000px.

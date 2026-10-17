@@ -11,8 +11,18 @@
 <meta property="og:title" content="Emanuel Téllez Enríquez — Enterprise Software Architect | Enrykez">
 <meta property="og:description" content="Integrating knowledge to build the future. 18 years of mission-critical systems for Fortune 500 & Global 500 corporations, payment platforms, and governments.">
 <meta property="og:url" content="https://enrykez.com/">
-<meta property="og:image" content="https://enrykez.com/assets/emanuel-hero.png">
-<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+<meta property="og:image" content="https://enrykez.com/assets/og-enrykez.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Emanuel Téllez Enríquez — Enterprise Software Architect · Enrykez">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#012738">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/emanuel-hero-600.webp" imagesrcset="assets/emanuel-hero-600.webp 600w, assets/emanuel-hero-1086.webp 1086w" imagesizes="(max-width:1000px) 420px, 600px" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -192,8 +202,6 @@ nav{position:sticky;top:0;z-index:60;background:rgba(1,39,56,.86);backdrop-filte
 .cred-list{list-style:none}
 .cred-list li{display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid var(--line)}
 .cred-list li:last-child{border-bottom:none}
-.cred-badge{width:44px;flex:none}
-.cred-badge.placeholder{visibility:hidden}
 .cred-list li>div{display:flex;flex-direction:column;gap:3px;min-width:0}
 .cred-name{font-family:var(--display);font-weight:600;color:var(--ink);font-size:15px;line-height:1.4}
 .cred-name a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
@@ -274,6 +282,7 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
 </style>
 </head>
 <body>
+<script>try{if(localStorage.getItem('enrykez-lang')==='es'){document.body.classList.add('lang-es');document.documentElement.lang='es';}}catch(e){}</script>
 
 <nav>
   <div class="wrap nav-inner">
@@ -283,8 +292,8 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
     </a>
     <button class="menu-btn" aria-label="Menu" aria-expanded="false" onclick="var n=document.getElementById('navlinks');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">☰</button>
     <div class="nav-links" id="navlinks">
-      <a href="#work"><span class="en">Selected Work</span><span class="es">Proyectos</span></a>
       <a href="#expertise"><span class="en">Expertise</span><span class="es">Especialidad</span></a>
+      <a href="#work"><span class="en">Selected Work</span><span class="es">Proyectos</span></a>
       <a href="#research"><span class="en">Research</span><span class="es">Investigación</span></a>
       <a href="#about"><span class="en">About</span><span class="es">Perfil</span></a>
       <a href="#contact"><span class="en">Contact</span><span class="es">Contacto</span></a>
@@ -294,8 +303,7 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
 </nav>
 
 <header class="hero" id="top">
-  <svg class="hero-net" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" aria-label="Aquarius constellation" role="img">
-    <title>Aquarius</title>
+  <svg class="hero-net" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
     <g stroke="rgba(130,200,220,0.18)" stroke-width="1" fill="none">
       <line x1="1350.0" y1="350.5" x2="1213.6" y2="256.4"/>
       <line x1="1213.6" y1="256.4" x2="1107.4" y2="130.7"/>
@@ -332,7 +340,10 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
   <img class="hero-symbol-wm" src="assets/enrykez-symbol-white.png" alt="" aria-hidden="true">
   <div class="wrap hero-grid">
     <div class="hero-photo">
-      <img src="assets/emanuel-hero.png" alt="Emanuel Téllez Enríquez walking through a mountain town, coffee in hand" width="600" height="800">
+      <picture>
+        <source type="image/webp" srcset="assets/emanuel-hero-600.webp 600w, assets/emanuel-hero-1086.webp 1086w" sizes="(max-width:1000px) 420px, 600px">
+        <img src="assets/emanuel-hero.png" alt="Emanuel Téllez Enríquez walking through a mountain town, coffee in hand" width="600" height="800" fetchpriority="high" decoding="async">
+      </picture>
     </div>
     <div class="hero-copy">
       <div class="hero-eyebrow">
@@ -561,35 +572,30 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
           <p class="venue"><span class="en">Memberships & Certifications</span><span class="es">Membresías y Certificaciones</span></p>
           <ul class="cred-list">
             <li>
-              <img class="cred-badge placeholder" src="assets/smc-badge.png" alt="" aria-hidden="true">
               <div>
                 <span class="cred-name"><span class="en">Active Professional Member — Asociación Mexicana de Contadores Públicos Colegio Profesional Veracruz-Centro A.C. (Mexican Association of Public Accountants)</span><span class="es">Miembro Profesional Activo — Asociación Mexicana de Contadores Públicos Colegio Profesional Veracruz-Centro A.C.</span></span>
                 <span class="cred-meta"><span class="en">Since 2020 · Credential no. 326</span><span class="es">Desde 2020 · Credencial no. 326</span></span>
               </div>
             </li>
             <li>
-              <img class="cred-badge" src="assets/google-genai-badge.png" alt="Google Cloud Certified — Generative AI Leader badge" loading="lazy">
               <div>
                 <span class="cred-name"><a href="https://www.credly.com/badges/b93ae655-e428-44e6-885d-d0d0f56804da/" target="_blank" rel="noopener">Google Cloud Certified — Generative AI Leader ↗</a></span>
                 <span class="cred-meta">Google Cloud · 2026 · ID c5563d29e6ce4abebc358ca76bc24a70</span>
               </div>
             </li>
             <li>
-              <img class="cred-badge" src="assets/smc-badge.png" alt="Scrum Master Certified (SMC) badge — SCRUMstudy" loading="lazy">
               <div>
                 <span class="cred-name"><a href="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumMasterCertified-EmanuelTellezEnriquez-1023445.pdf" target="_blank" rel="noopener">Scrum Master Certified (SMC®) ↗</a></span>
                 <span class="cred-meta">SCRUMstudy · 2024 · Cert. no. 1023445</span>
               </div>
             </li>
             <li>
-              <img class="cred-badge" src="assets/smc-badge.png" alt="Scrum Fundamentals Certified (SFC) badge — SCRUMstudy" loading="lazy">
               <div>
                 <span class="cred-name">Scrum Fundamentals Certified (SFC™)</span>
                 <span class="cred-meta">SCRUMstudy · 2024</span>
               </div>
             </li>
             <li>
-              <img class="cred-badge placeholder" src="assets/smc-badge.png" alt="" aria-hidden="true">
               <div>
                 <span class="cred-name">Management 3.0 Foundation Workshop</span>
                 <span class="cred-meta">Management 3.0 · 2025</span>
@@ -606,7 +612,7 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
   <div class="wrap">
     <div class="section-head reveal">
       <span class="kicker"><span class="en">About</span><span class="es">Perfil</span></span>
-      <h2><span class="en">Two decades turning regulation into reliable software</span><span class="es">Dos décadas convirtiendo regulación en software confiable</span></h2>
+      <h2><span class="en">Nearly two decades turning regulation into reliable software</span><span class="es">Casi dos décadas convirtiendo regulación en software confiable</span></h2>
     </div>
     <div class="about-grid">
       <div class="about-photo reveal">
