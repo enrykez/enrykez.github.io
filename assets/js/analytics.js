@@ -99,8 +99,8 @@
     // Cloudflare's automatic setup (proxied zones) injects its own beacon: never add a second one.
     if (d.querySelector('script[src*="cloudflareinsights.com/beacon"]')) { log('Cloudflare beacon already present'); return; }
     addScript('https://static.cloudflareinsights.com/beacon.min.js', {
-      'data-cf-beacon': JSON.stringify({ token: cfToken, spa: false }),
-      defer: ''
+      type: 'module', // as in Cloudflare's official snippet
+      'data-cf-beacon': JSON.stringify({ token: cfToken, spa: false })
     });
     log('Cloudflare Web Analytics loaded');
   }

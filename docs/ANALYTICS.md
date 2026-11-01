@@ -1,7 +1,8 @@
 # Analítica web — enrykez.com
 
-> Estado: **implementado en código, inactivo hasta configurar identificadores.**
-> Con los tres identificadores vacíos el sitio no carga ningún servicio externo de analítica ni muestra el banner de consentimiento.
+> Estado (1-nov-2026):
+> - **Cloudflare Web Analytics: activo** — token configurado, método *JS snippet* (la zona está en *DNS only*, nube gris).
+> - **GA4 y Clarity: pendientes** — sin identificador no se cargan ni se muestra el banner.
 
 ## 1. Arquitectura
 
@@ -158,7 +159,7 @@ Reglas aplicadas automáticamente: nombres y claves en `snake_case` (≤40), má
 
 ## 11. Acciones manuales pendientes
 
-- [ ] Verificar si enrykez.com está en Cloudflare y con proxy (§3, paso 0) y elegir opción A o B.
+- [x] Cloudflare: zona en *DNS only* → opción B (token) configurada el 1-nov-2026. En el dashboard el sitio debe quedar en **Enable with JS Snippet installation**.
 - [ ] Crear propiedad GA4 y enviarme el **Measurement ID** (`G-…`).
 - [ ] Crear proyecto Clarity y enviarme el **Project ID**.
 - [ ] Configurar en GA4: enhanced measurement, retención, custom dimensions, key events (§4).

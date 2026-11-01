@@ -13,7 +13,7 @@ window.ENRYKEZ_ANALYTICS = {
      Leave empty if the site is proxied by Cloudflare and you enabled
      "automatic setup" in the dashboard (Cloudflare injects the beacon itself;
      setting a token too would count every visit twice). */
-  cloudflareToken: "",
+  cloudflareToken: "f0709b8779604d9cac60022845eaeb8c", // enrykez.com · manual JS snippet (DNS-only zone)
 
   /* Google Analytics 4 — Measurement ID, format "G-XXXXXXXXXX".
      Requires prior opt-in consent. */
