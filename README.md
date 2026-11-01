@@ -8,6 +8,8 @@ Sitio estático bilingüe (EN principal / ES) publicado con GitHub Pages. Posici
 /
 ├── index.html               # Sitio completo (HTML + CSS + JS autocontenido)
 ├── 404.html                 # Página de error de GitHub Pages
+├── privacy.html             # Aviso de privacidad (EN/ES) — borrador, revisar antes de activar GA4/Clarity
+├── docs/ANALYTICS.md        # Analítica: arquitectura, configuración y eventos
 ├── robots.txt · sitemap.xml # Indexado
 ├── CNAME                    # Dominio personalizado enrykez.com — NO modificar
 ├── .gitattributes           # Normaliza finales de línea (LF) entre Windows y Linux
@@ -83,3 +85,7 @@ No son decoración genérica: cada uno refiere a algo de Emanuel. Mantenerlos su
 - **Caballo de ajedrez** como marca de agua en *Selected Work*.
 - **Hormigas** sobre una línea de feromona en la tarjeta del artículo IEEE (*An Ant System with Steps Counter*); caminan al pasar el cursor.
 - **Mensaje en la consola** del navegador para quien inspeccione el sitio.
+
+## Analítica
+
+Cloudflare Web Analytics (sin cookies) + Google Analytics 4 y Microsoft Clarity (solo con consentimiento). Los identificadores viven en `assets/js/analytics-config.js`; con los tres vacíos no se carga nada ni aparece banner. Guía completa: [`docs/ANALYTICS.md`](docs/ANALYTICS.md).
