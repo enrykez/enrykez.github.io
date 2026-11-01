@@ -21,10 +21,10 @@ window.ENRYKEZ_ANALYTICS = {
 
   /* Microsoft Clarity — Project ID (short alphanumeric string).
      Requires prior opt-in consent. */
-  clarityProjectId: "",
+  clarityProjectId: "z6qxbwncjb", // project "Enrykez"
 
   /* Consent */
-  consentStorageKey: "enrykez-consent-v1",
+  consentStorageKey: "enrykez-consent-v2", // v2: Clarity added → ask everyone again
   consentMaxAgeDays: 365,       // ask again after this many days
   honorGlobalPrivacyControl: true, // GPC signal = decline, no banner
   privacyNoticeUrl: "/privacy.html",
