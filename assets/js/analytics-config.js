@@ -17,7 +17,7 @@ window.ENRYKEZ_ANALYTICS = {
 
   /* Google Analytics 4 — Measurement ID, format "G-XXXXXXXXXX".
      Requires prior opt-in consent. */
-  ga4MeasurementId: "",
+  ga4MeasurementId: "G-RB7X57DSCK", // property "Enrykez" · stream enrykez.com
 
   /* Microsoft Clarity — Project ID (short alphanumeric string).
      Requires prior opt-in consent. */

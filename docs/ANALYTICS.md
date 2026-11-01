@@ -2,7 +2,8 @@
 
 > Estado (1-nov-2026):
 > - **Cloudflare Web Analytics: activo** — token configurado, método *JS snippet* (la zona está en *DNS only*, nube gris).
-> - **GA4 y Clarity: pendientes** — sin identificador no se cargan ni se muestra el banner.
+> - **Google Analytics 4: configurado** — `G-RB7X57DSCK` (propiedad *Enrykez*, flujo *enrykez.com*); se carga solo tras «Aceptar».
+> - **Clarity: pendiente** — sin identificador no se carga.
 
 ## 1. Arquitectura
 
@@ -160,7 +161,7 @@ Reglas aplicadas automáticamente: nombres y claves en `snake_case` (≤40), má
 ## 11. Acciones manuales pendientes
 
 - [x] Cloudflare: zona en *DNS only* → opción B (token) configurada el 1-nov-2026. En el dashboard el sitio debe quedar en **Enable with JS Snippet installation**.
-- [ ] Crear propiedad GA4 y enviarme el **Measurement ID** (`G-…`).
+- [x] Propiedad GA4 creada: `G-RB7X57DSCK`.
 - [ ] Crear proyecto Clarity y enviarme el **Project ID**.
 - [ ] Configurar en GA4: enhanced measurement, retención, custom dimensions, key events (§4).
 - [ ] Configurar en Clarity: masking e IP blocking (§5).
