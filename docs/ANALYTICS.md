@@ -8,7 +8,7 @@
 ## 1. Arquitectura
 
 ```
-index.html / 404.html / privacy.html
+index.html / 404.html
    └─ <script defer> assets/js/analytics-config.js   ← IDs y opciones (única fuente de verdad)
    └─ <script defer> assets/js/analytics.js          ← cargador, consentimiento y eventos
           ├─ Cloudflare Web Analytics  → sin cookies, se carga siempre (si hay token)
@@ -34,11 +34,11 @@ index.html / 404.html / privacy.html
 | `assets/js/analytics-config.js` | **Nuevo.** Identificadores y opciones. |
 | `assets/js/analytics.js` | **Nuevo.** Carga de proveedores, consentimiento, `trackEvent`, seguimiento declarativo. |
 | `assets/css/consent.css` | **Nuevo.** Estilos del banner (carga bajo demanda). |
-| `privacy.html` | **Nuevo.** Aviso de privacidad bilingüe (borrador para revisión — ver §11). |
+| `privacy.html` | Hoy redirige a `/privacidad`, el aviso de privacidad integral (incluye la sección de cookies). |
 | `docs/ANALYTICS.md` | **Nuevo.** Este documento. |
 | `index.html` | Dos `<script defer>`; atributos `data-track` en enlaces relevantes; en el footer: enlace «Privacy» y botón «Cookie settings» (oculto hasta configurar GA4/Clarity). Sin cambios de diseño. |
 | `404.html` | Dos `<script defer>`. |
-| `sitemap.xml` | Agrega `privacy.html`. |
+| `sitemap.xml` | Incluye `/soporte`, `/privacidad` y `/terminos`. |
 | `README.md` | Referencia a este documento. |
 
 ## 3. Cloudflare Web Analytics
@@ -155,7 +155,7 @@ Reglas aplicadas automáticamente: nombres y claves en `snake_case` (≤40), má
 | Desactivar Clarity | `clarityProjectId: ""` |
 | Desactivar Cloudflare | `cloudflareToken: ""` (y, si usas *automatic setup*, desactívalo en el dashboard) |
 | Quitar el banner | Dejar vacíos GA4 y Clarity (el banner solo existe para ellos) |
-| Retirar todo | Quitar las dos líneas `<script>` de `index.html`, `404.html` y `privacy.html` |
+| Retirar todo | Quitar las dos líneas `<script>` de `index.html` y `404.html` |
 | Volver a preguntar a todos | Cambiar `consentStorageKey` (p. ej. `enrykez-consent-v2`) |
 
 ## 11. Acciones manuales pendientes
@@ -165,7 +165,7 @@ Reglas aplicadas automáticamente: nombres y claves en `snake_case` (≤40), má
 - [x] Proyecto Clarity creado: `z6qxbwncjb`.
 - [ ] Configurar en GA4: enhanced measurement, retención, custom dimensions, key events (§4).
 - [ ] Configurar en Clarity: masking e IP blocking (§5).
-- [ ] **Revisar `privacy.html`** antes de activar GA4/Clarity. Es un borrador técnico, no asesoría legal. Para cumplir la LFPDPPP (México) un aviso de privacidad integral suele requerir, además, domicilio del responsable y el procedimiento detallado para derechos ARCO; si esperas visitantes de la UE, considera también los requisitos del RGPD. Conviene validarlo con un especialista.
+- [ ] **Revisar `/privacidad`** (sección 8, cookies) antes de activar GA4/Clarity. Es un borrador técnico, no asesoría legal. Para cumplir la LFPDPPP (México) un aviso de privacidad integral suele requerir, además, domicilio del responsable y el procedimiento detallado para derechos ARCO; si esperas visitantes de la UE, considera también los requisitos del RGPD. Conviene validarlo con un especialista.
 
 ## 12. Privacidad y proveedores
 

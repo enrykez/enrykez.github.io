@@ -27,7 +27,7 @@ window.ENRYKEZ_ANALYTICS = {
   consentStorageKey: "enrykez-consent-v2", // v2: Clarity added → ask everyone again
   consentMaxAgeDays: 365,       // ask again after this many days
   honorGlobalPrivacyControl: true, // GPC signal = decline, no banner
-  privacyNoticeUrl: "/privacy.html",
+  privacyNoticeUrl: "/privacidad",
 
   /* Behaviour */
   trackSectionViews: true,      // one section_view per section per page load

@@ -8,7 +8,10 @@ Sitio estático bilingüe (EN principal / ES) publicado con GitHub Pages. Posici
 /
 ├── index.html               # Sitio completo (HTML + CSS + JS autocontenido)
 ├── 404.html                 # Página de error de GitHub Pages
-├── privacy.html             # Aviso de privacidad (EN/ES) — borrador, revisar antes de activar GA4/Clarity
+├── soporte.html             # /soporte — Soporte y contacto (ES/EN)
+├── privacidad.html          # /privacidad — Aviso de privacidad integral (ES/EN)
+├── terminos.html            # /terminos — Términos de servicio (ES/EN)
+├── privacy.html             # Redirección a /privacidad (URL anterior)
 ├── docs/ANALYTICS.md        # Analítica: arquitectura, configuración y eventos
 ├── robots.txt · sitemap.xml # Indexado
 ├── CNAME                    # Dominio personalizado enrykez.com — NO modificar
@@ -89,3 +92,7 @@ No son decoración genérica: cada uno refiere a algo de Emanuel. Mantenerlos su
 ## Analítica
 
 Cloudflare Web Analytics (sin cookies) + Google Analytics 4 y Microsoft Clarity (solo con consentimiento). Los identificadores viven en `assets/js/analytics-config.js`; con los tres vacíos no se carga nada ni aparece banner. Guía completa: [`docs/ANALYTICS.md`](docs/ANALYTICS.md).
+
+## Páginas legales (Enrykez Software · Stripe)
+
+`/soporte`, `/privacidad` y `/terminos` son HTML estáticos sin scripts que comparten `assets/css/legal.css`. Español es la versión que prevalece; el inglés es traducción de cortesía en la misma página. GitHub Pages sirve `soporte.html` en `/soporte` (sin extensión). Los datos pendientes se marcan con `<span class="pendiente">` (resaltado amarillo): **no publicar con marcadores visibles**. Cualquier cambio de descriptor de Stripe (`ENRYKEZ* <PRODUCTO>`), correo o productos debe reflejarse en las tres páginas.

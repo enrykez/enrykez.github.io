@@ -302,7 +302,7 @@
 
   function buildBanner() {
     ensureCss();
-    var privacy = C.privacyNoticeUrl || '/privacy.html';
+    var privacy = C.privacyNoticeUrl || '/privacidad';
     var tools = toolNames();
     var el = d.createElement('div');
     el.className = 'ek-consent';
@@ -354,12 +354,14 @@
       wireLanguage();
       wireErrors();
       if (!needsConsent) return;
+      w.addEventListener('hashchange', function () { if (location.hash === '#cookie-settings') showBanner(true); });
       revealSettingsLinks();
-      if (gpcEnabled() && readConsent() === null) { state.consent = false; log('GPC detected: consent tools stay off'); return; }
+      var wantsSettings = location.hash === '#cookie-settings'; // link from /privacidad
+      if (gpcEnabled() && readConsent() === null && !wantsSettings) { state.consent = false; log('GPC detected: consent tools stay off'); return; }
       var stored = readConsent();
       if (stored === true) enableConsentTools();
       else if (stored === false) state.consent = false;
-      else showBanner(false);
+      if (stored === null || wantsSettings) showBanner(wantsSettings);
     } catch (e) { /* never break the page */ }
   }
 
