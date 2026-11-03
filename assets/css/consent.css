@@ -2,22 +2,22 @@
    a consent-based tool (GA4 / Clarity) is configured. Self-contained: works on
    index, 404 and privacy pages without the main stylesheet. */
 .ek-consent{position:fixed;left:24px;bottom:24px;z-index:70;max-width:430px;
-  background:#012738;color:#CFE0E8;border:1px solid rgba(255,255,255,.16);border-radius:14px;
+  background:#0C1A30;color:#D3E2F5;border:1px solid rgba(255,255,255,.16);border-radius:14px;
   padding:20px 22px;box-shadow:0 20px 50px -20px rgba(0,0,0,.55);
   font-family:'Prompt',system-ui,sans-serif;font-weight:300;font-size:14px;line-height:1.55}
 .ek-consent[hidden]{display:none}
 .ek-consent-text{margin:0 0 16px}
 .ek-consent a{display:inline;padding:0;margin:0;background:none;border-radius:0;font:inherit;
-  color:#4FA3C7;text-decoration:underline;text-underline-offset:2px}
+  color:#FFC61A;text-decoration:underline;text-underline-offset:2px}
 .ek-consent a:hover{background:none;color:#fff}
 .ek-consent-actions{display:flex;gap:10px;justify-content:flex-end}
 .ek-btn{font-family:'Exo 2',system-ui,sans-serif;font-weight:600;font-size:14px;line-height:1;
   padding:11px 20px;border-radius:8px;cursor:pointer;border:1px solid rgba(255,255,255,.4);
   background:transparent;color:#fff;min-width:104px}
 .ek-btn:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.ek-btn-primary{background:#fff;color:#013E5A;border-color:#fff}
-.ek-btn-primary:hover{background:#4FA3C7;border-color:#4FA3C7;color:#04283a}
-.ek-btn:focus-visible,.ek-consent a:focus-visible{outline:2px solid #4FA3C7;outline-offset:3px}
+.ek-btn-primary{background:#fff;color:#13284A;border-color:#fff}
+.ek-btn-primary:hover{background:#FFC61A;border-color:#FFC61A;color:#13284A}
+.ek-btn:focus-visible,.ek-consent a:focus-visible{outline:2px solid #FFC61A;outline-offset:3px}
 .ek-consent .ek-t-es{display:none}
 .ek-consent.ek-es .ek-t-es{display:inline}
 .ek-consent.ek-es .ek-t-en{display:none}

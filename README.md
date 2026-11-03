@@ -13,6 +13,7 @@ Sitio estático bilingüe (EN principal / ES) publicado con GitHub Pages. Posici
 ├── terminos.html            # /terminos — Términos de servicio (ES/EN)
 ├── privacy.html             # Redirección a /privacidad (URL anterior)
 ├── docs/ANALYTICS.md        # Analítica: arquitectura, configuración y eventos
+├── docs/DESIGN.md           # Paleta (marino · celeste · amarillo sol), reglas de uso y decisiones de diseño
 ├── robots.txt · sitemap.xml # Indexado
 ├── CNAME                    # Dominio personalizado enrykez.com — NO modificar
 ├── .gitattributes           # Normaliza finales de línea (LF) entre Windows y Linux
@@ -96,3 +97,7 @@ Cloudflare Web Analytics (sin cookies) + Google Analytics 4 y Microsoft Clarity 
 ## Páginas legales (Enrykez Software · Stripe)
 
 `/soporte`, `/privacidad` y `/terminos` son HTML estáticos sin scripts que comparten `assets/css/legal.css`. Español es la versión que prevalece; el inglés es traducción de cortesía en la misma página. GitHub Pages sirve `soporte.html` en `/soporte` (sin extensión). Los datos pendientes se marcan con `<span class="pendiente">` (resaltado amarillo): **no publicar con marcadores visibles**. Cualquier cambio de descriptor de Stripe (`ENRYKEZ* <PRODUCTO>`), correo o productos debe reflejarse en las tres páginas.
+
+## Diseño
+
+Paleta azul marino `#13284A` · celeste `#A8C8EA` · amarillo sol `#FFC61A`, definida como tokens en `:root`. Reglas (amarillo nunca como texto sobre fondo claro, un acento por pantalla, foco de teclado doble) y la variante descartada en [`docs/DESIGN.md`](docs/DESIGN.md).

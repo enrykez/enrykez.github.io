@@ -1,8 +1,10 @@
 /* Enrykez — shared styles for legal & support pages (/soporte, /privacidad, /terminos).
    Same tokens and typography as index.html; no scripts required. */
 :root{
-  --brand:#00628D;--brand-deep:#013E5A;--brand-abyss:#012738;--brand-glow:#4FA3C7;
-  --paper:#F4F7F9;--paper-2:#E8EFF3;--ink:#0A2331;--text:#2C4656;--muted:#5E7686;--line:#D3E0E7;
+  /* Palette: azul marino · celeste · amarillo sol (docs/DESIGN.md) */
+  --sol:#FFC61A;--sol-hover:#FFD65C;--celeste:#A8C8EA;
+  --brand:#13284A;--brand-deep:#13284A;--brand-abyss:#0C1A30;--brand-glow:#FFC61A;
+  --paper:#F6F9FD;--paper-2:#E6EEF9;--ink:#13284A;--text:#2E3F5C;--muted:#5B6B86;--line:#D4E1F1;
   --display:'Exo 2',sans-serif;--body:'Prompt',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -10,19 +12,19 @@ html{scroll-behavior:smooth}
 body{font-family:var(--body);font-weight:300;color:var(--text);background:var(--paper);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
 a{color:var(--brand);text-underline-offset:2px}
 a:hover{color:var(--brand-deep)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--brand-glow);outline-offset:3px;border-radius:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--sol);outline-offset:3px;box-shadow:0 0 0 2px var(--brand-deep);border-radius:3px}
 .skip{position:absolute;left:-999px;top:8px;background:#fff;color:var(--brand-deep);padding:8px 14px;border-radius:6px;z-index:10;font-family:var(--display);font-weight:600}
 .skip:focus{left:12px}
 
 /* Header */
-.legal-header{background:linear-gradient(120deg,var(--brand-abyss) 0%,var(--brand-deep) 52%,#024061 100%);color:#fff;padding:22px}
+.legal-header{background:linear-gradient(120deg,var(--brand-abyss) 0%,var(--brand-deep) 52%,#1A3560 100%);color:#fff;padding:22px}
 .bar,.wrap{max-width:860px;margin:0 auto}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:14px 24px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:var(--display);font-weight:700;font-size:19px}
 .brand:hover{color:#fff}
 .brand img{width:28px;height:auto;filter:brightness(0) invert(1)}
 .legal-nav{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--display);font-weight:600;font-size:14px}
-.legal-nav a{color:#B9CFD9;text-decoration:none}
+.legal-nav a{color:#C2D7F0;text-decoration:none}
 .legal-nav a:hover{color:#fff}
 .legal-nav a[aria-current="page"]{color:#fff;text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--brand-glow)}
 .legal-nav .sep{color:rgba(255,255,255,.25)}
@@ -49,8 +51,8 @@ code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font
 .card h2,.card h3{margin-top:0}
 .contact-card{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
 .contact-card .big{font-family:var(--display);font-weight:700;font-size:clamp(18px,3.2vw,22px);color:var(--ink);word-break:break-word}
-.btn{display:inline-flex;align-items:center;font-family:var(--display);font-weight:600;font-size:15px;padding:12px 22px;border-radius:8px;background:var(--brand);color:#fff;text-decoration:none}
-.btn:hover{background:var(--brand-deep);color:#fff}
+.btn{display:inline-flex;align-items:center;font-family:var(--display);font-weight:600;font-size:15px;padding:12px 22px;border-radius:8px;background:var(--sol);color:var(--brand-deep);text-decoration:none}
+.btn:hover{background:var(--sol-hover);color:var(--brand-deep)}
 .callout{border-left:3px solid var(--brand-glow);background:#fff;border-radius:0 12px 12px 0;padding:18px 22px;margin:18px 0}
 .callout p:last-child,.card p:last-child{margin-bottom:0}
 
@@ -65,9 +67,9 @@ th{font-family:var(--display);font-weight:600;color:var(--ink);background:var(--
 .pendiente{background:#FFF1B8;color:#5A4300;border:1px dashed #C99A00;border-radius:4px;padding:0 5px;font-weight:500}
 
 /* Footer */
-.legal-footer{background:var(--brand-abyss);color:#7F9BAA;font-size:13px;padding:26px 22px}
+.legal-footer{background:var(--brand-abyss);color:#8FA3C2;font-size:13px;padding:26px 22px}
 .legal-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
-.legal-footer a{color:#B9CFD9}
+.legal-footer a{color:#C2D7F0}
 .legal-footer a:hover{color:#fff}
 .legal-footer nav{display:flex;flex-wrap:wrap;gap:6px 16px}
 
