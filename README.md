@@ -25,10 +25,9 @@ Sitio estático bilingüe (EN principal / ES) publicado con GitHub Pages. Posici
     ├── emanuel-hero.png         # Respaldo del hero para navegadores sin WebP
     ├── emanuel-about-casual.webp · .jpg  # Foto About (tono atenuado hacia la paleta)
     ├── emanuel-about.jpg        # Foto B/N formal — reserva (no usada)
-    ├── og-enrykez.jpg           # Imagen para compartir (Open Graph 1200×630)
+    ├── og-enrykez-v2.jpg        # Imagen para compartir (Open Graph 1200×630, Brand Kit v2). Al cambiarla, usar un nombre nuevo: las redes guardan la vista previa por URL
     ├── enrykez-isotipo-negativo.svg  # Isotipo para fondos oscuros (Brand Kit v2)
     ├── enrykez-isotipo-positivo.svg  # Isotipo para fondos claros (Brand Kit v2)
-    ├── enrykez-symbol-*.png · favicon.ico · favicon-32.png · apple-touch-icon.png  # Obsoletos — pendientes de eliminar (ver docs/DESIGN.md §4)
     ├── google-genai-badge.png · smc-badge.png   # Badges de certificación
     └── emanuel-hero.jpg · emanuel-contact.jpg   # Reserva (no usadas)
 ```

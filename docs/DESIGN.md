@@ -82,7 +82,6 @@ Desde noviembre de 2026 el sitio usa el **Brand Kit v2** de Enrykez (logo en col
 
 **Reglas:** elegir la variante por el fondo, nunca recolorear con `filter`, nunca poner el logo dentro de un círculo o recuadro de color; dimensionar por altura (proporción 0.889:1) y declarar `width`/`height` para evitar saltos de maquetación. La opacidad reducida solo se permite en las dos marcas de agua decorativas.
 
-**Pendientes:**
-- `assets/og-enrykez.jpg` aún contiene el símbolo anterior (blanco) — regenerar con el Brand Kit v2.
-- Eliminar, en un commit posterior, `assets/enrykez-symbol-white.png`, `enrykez-symbol-brand.png`, `enrykez-symbol-gray.png`, `assets/favicon.ico`, `assets/favicon-32.png` y `assets/apple-touch-icon.png` (ya sin referencias en el código).
+**Notas y pendientes:**
+- `assets/og-enrykez-v2.jpg` (Open Graph) ya usa el isotipo negativo. Si se regenera, publicar con un nombre nuevo y refrescar la caché en el Post Inspector de LinkedIn.
 - **Coherencia de color:** el Azul Enrykez del kit (`#00628D`, logo positivo y favicon) no coincide con el marino `#13284A` del sitio, y el amarillo sol no forma parte de la paleta del kit. Decidir si la paleta del sitio es una paleta digital derivada (documentar la relación) o si se alinea con el kit.
