@@ -22,7 +22,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--sol);outline-offset
 .bar{display:flex;align-items:center;justify-content:space-between;gap:14px 24px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:var(--display);font-weight:700;font-size:19px}
 .brand:hover{color:#fff}
-.brand img{width:28px;height:auto;filter:brightness(0) invert(1)}
+.brand img{height:28px;width:auto}
 .legal-nav{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--display);font-weight:600;font-size:14px}
 .legal-nav a{color:#C2D7F0;text-decoration:none}
 .legal-nav a:hover{color:#fff}

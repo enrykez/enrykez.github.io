@@ -15,6 +15,9 @@ Sitio estático bilingüe (EN principal / ES) publicado con GitHub Pages. Posici
 ├── docs/ANALYTICS.md        # Analítica: arquitectura, configuración y eventos
 ├── docs/DESIGN.md           # Paleta (marino · celeste · amarillo sol), reglas de uso y decisiones de diseño
 ├── robots.txt · sitemap.xml # Indexado
+├── favicon.ico · favicon.svg · favicon-16x16.png · favicon-32x32.png   # Favicon (Brand Kit v2, en la raíz)
+├── apple-touch-icon.png · icon-192.png · icon-512.png · icon-512-maskable.png
+├── site.webmanifest         # Manifest PWA (theme_color #0C1A30)
 ├── CNAME                    # Dominio personalizado enrykez.com — NO modificar
 ├── .gitattributes           # Normaliza finales de línea (LF) entre Windows y Linux
 └── assets/
@@ -23,8 +26,9 @@ Sitio estático bilingüe (EN principal / ES) publicado con GitHub Pages. Posici
     ├── emanuel-about-casual.webp · .jpg  # Foto About (tono atenuado hacia la paleta)
     ├── emanuel-about.jpg        # Foto B/N formal — reserva (no usada)
     ├── og-enrykez.jpg           # Imagen para compartir (Open Graph 1200×630)
-    ├── enrykez-symbol-*.png     # Símbolo de marca (white / brand / gray)
-    ├── favicon.ico · favicon-32.png · apple-touch-icon.png
+    ├── enrykez-isotipo-negativo.svg  # Isotipo para fondos oscuros (Brand Kit v2)
+    ├── enrykez-isotipo-positivo.svg  # Isotipo para fondos claros (Brand Kit v2)
+    ├── enrykez-symbol-*.png · favicon.ico · favicon-32.png · apple-touch-icon.png  # Obsoletos — pendientes de eliminar (ver docs/DESIGN.md §4)
     ├── google-genai-badge.png · smc-badge.png   # Badges de certificación
     └── emanuel-hero.jpg · emanuel-contact.jpg   # Reserva (no usadas)
 ```
@@ -101,3 +105,5 @@ Cloudflare Web Analytics (sin cookies) + Google Analytics 4 y Microsoft Clarity 
 ## Diseño
 
 Paleta azul marino `#13284A` · celeste `#A8C8EA` · amarillo sol `#FFC61A`, definida como tokens en `:root`. Reglas (amarillo nunca como texto sobre fondo claro, un acento por pantalla, foco de teclado doble) y la variante descartada en [`docs/DESIGN.md`](docs/DESIGN.md).
+
+Logotipo: **Brand Kit v2** (fuente maestra fuera del repositorio; aquí solo copias). Fondo claro → variante *positivo*; fondo oscuro → *negativo*. Nunca recolorear con `filter` ni encerrar el logo en un recuadro de color.

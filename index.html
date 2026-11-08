@@ -19,9 +19,12 @@
 <meta property="og:locale:alternate" content="es_MX">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0C1A30">
-<link rel="icon" href="assets/favicon.ico" sizes="any">
-<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preload" as="image" href="assets/emanuel-hero-600.webp" imagesrcset="assets/emanuel-hero-600.webp 600w, assets/emanuel-hero-1086.webp 1086w" imagesizes="(max-width:1000px) 420px, 600px" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,7 +118,7 @@ h2{font-size:clamp(30px,4vw,44px);font-weight:800;margin-bottom:16px}
 nav{position:sticky;top:0;z-index:60;background:rgba(12,26,48,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-dark)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
 .brand-lock{display:flex;align-items:center;gap:11px;text-decoration:none}
-.brand-lock img{width:30px;height:auto}
+.brand-lock img{height:30px;width:auto}
 .brand-lock .wordmark{font-family:var(--display);font-weight:700;font-size:20px;color:#fff;letter-spacing:.01em}
 .nav-links{display:flex;gap:30px;align-items:center}
 .nav-links a{color:#C2D7F0;font-family:var(--display);font-size:14.5px;font-weight:500;text-decoration:none}
@@ -144,13 +147,13 @@ nav{position:sticky;top:0;z-index:60;background:rgba(12,26,48,.9);backdrop-filte
 .ant-trail svg{width:14px;height:14px;transform:scaleX(-1)}
 .paper:hover .ant-trail .ants{transform:translateX(-60%)}
 .aq-glyph{display:inline-block;width:14px;height:10px;margin:0 6px;vertical-align:middle;color:#8FA3C2;opacity:.7}
-.hero-symbol-wm{position:absolute;right:-6%;bottom:-14%;width:52%;max-width:640px;opacity:.05;pointer-events:none;filter:brightness(0) invert(1)}
+.hero-symbol-wm{position:absolute;right:-6%;bottom:-14%;width:52%;max-width:640px;height:auto;opacity:.05;pointer-events:none}
 .hero-grid{position:relative;display:grid;grid-template-columns:1.02fr 1fr;align-items:end;min-height:640px;z-index:2}
 .hero-photo{align-self:end;margin-left:-32px}
 .hero-photo img{width:100%;max-width:600px;height:auto;display:block}
 .hero-copy{align-self:center;padding:80px 0 90px 8px}
 .hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px}
-.hero-eyebrow img{width:34px;height:auto;filter:brightness(0) invert(1);opacity:.92}
+.hero-eyebrow img{height:34px;width:auto}
 .hero-eyebrow span{font-family:var(--display);font-weight:600;font-size:13.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--celeste)}
 .hero h1{color:#fff;font-size:clamp(34px,4.6vw,56px);font-weight:800;line-height:1.05;margin-bottom:14px}
 .hero .role{font-family:var(--display);font-weight:500;font-size:clamp(16px,2vw,20px);color:#C6DAF1;margin-bottom:26px}
@@ -184,7 +187,7 @@ nav{position:sticky;top:0;z-index:60;background:rgba(12,26,48,.9);backdrop-filte
 .exp-cell .dom{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin-bottom:14px}
 .exp-cell p{font-size:15px;color:var(--muted);font-weight:300}
 .hybrid{margin-top:28px;background:linear-gradient(100deg,#1A3560 0%,var(--brand-deep) 100%);border-radius:16px;padding:36px 40px;display:flex;gap:24px;align-items:center;color:#EEF4FB}
-.hybrid .hb-symbol{width:64px;flex:none;filter:brightness(0) invert(1);opacity:.9}
+.hybrid .hb-symbol{height:64px;width:auto;flex:none}
 .hybrid h3{color:#fff;font-size:20px;margin-bottom:8px}
 .hybrid p{font-size:15.5px;color:#DCE8F6;font-weight:300}
 
@@ -273,7 +276,7 @@ nav{position:sticky;top:0;z-index:60;background:rgba(12,26,48,.9);backdrop-filte
 .about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:56px;align-items:start}
 .about-photo{position:relative}
 .about-photo img{border-radius:14px;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top}
-.about-photo .wm{position:absolute;right:-16px;bottom:-16px;width:82px;opacity:.14}
+.about-photo .wm{position:absolute;right:-16px;bottom:-16px;width:82px;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:0;opacity:.14}
 .about-copy p{margin-bottom:17px;font-size:16.5px;font-weight:300}
 .edu{margin-top:28px;border-top:1px solid var(--line)}
 .edu-row{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:15px 0;border-bottom:1px solid var(--line);font-size:15px;font-weight:300}
@@ -300,7 +303,7 @@ nav{position:sticky;top:0;z-index:60;background:rgba(12,26,48,.9);backdrop-filte
 footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);padding:34px 0}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
 .footer-brand{display:flex;align-items:center;gap:11px}
-.footer-brand img{width:26px;filter:brightness(0) invert(1);opacity:.85}
+.footer-brand img{height:26px;width:auto}
 .footer-brand .wm{font-family:var(--display);font-weight:700;color:#fff;font-size:17px}
 .footer-brand .sl{font-family:var(--body);font-weight:300;font-size:12.5px;color:#8FA3C2;margin-left:4px}
 .footer-meta{font-family:var(--body);font-weight:300;font-size:12.5px;color:#8FA3C2}
@@ -358,7 +361,7 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
 <nav>
   <div class="wrap nav-inner">
     <a class="brand-lock" href="#top">
-      <img src="assets/enrykez-symbol-white.png" alt="Enrykez">
+      <img src="assets/enrykez-isotipo-negativo.svg" alt="Enrykez" width="27" height="30">
       <span class="wordmark">Enrykez</span>
     </a>
     <button class="menu-btn" aria-label="Menu" aria-expanded="false" onclick="var n=document.getElementById('navlinks');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">☰</button>
@@ -455,7 +458,7 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
       <circle cx="1312.2" cy="467.1" r="4.5"/>
     </g>
   </svg>
-  <img class="hero-symbol-wm" src="assets/enrykez-symbol-white.png" alt="" aria-hidden="true">
+  <img class="hero-symbol-wm" src="assets/enrykez-isotipo-negativo.svg" alt="" aria-hidden="true" width="640" height="720">
   <div class="wrap hero-grid">
     <div class="hero-photo">
       <picture>
@@ -465,7 +468,7 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
     </div>
     <div class="hero-copy">
       <div class="hero-eyebrow">
-        <img src="assets/enrykez-symbol-white.png" alt="">
+        <img src="assets/enrykez-isotipo-negativo.svg" alt="" width="30" height="34">
         <span>Enrykez</span>
       </div>
       <h1>Emanuel Téllez Enríquez</h1>
@@ -529,7 +532,7 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
       </div>
     </div>
     <div class="hybrid reveal">
-      <img class="hb-symbol" src="assets/enrykez-symbol-white.png" alt="">
+      <img class="hb-symbol" src="assets/enrykez-isotipo-negativo.svg" alt="" width="57" height="64">
       <div>
         <h3><span class="en">A hybrid profile: technology + accounting</span><span class="es">Un perfil híbrido: tecnología + contaduría</span></h3>
         <p><span class="en">I hold dual bachelor's degrees in Computer Systems and Accounting, and formal employer records recognize me as “technical leader and accountant” in governmental accounting. This rare combination is why governments and multinationals engage me for systems where the code must embody the tax law itself.</span><span class="es">Tengo doble licenciatura en Sistemas Computacionales Administrativos y Contaduría, y registros formales de empleadores me reconocen como “líder técnico y contador” en contabilidad gubernamental. Esta combinación poco común es la razón por la que gobiernos y multinacionales me contratan para sistemas donde el código debe materializar la propia ley fiscal.</span></p>
@@ -785,7 +788,7 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
           <source type="image/webp" srcset="assets/emanuel-about-casual.webp">
           <img src="assets/emanuel-about-casual.jpg" alt="Emanuel Téllez Enríquez working at his desk" width="720" height="900" loading="lazy" decoding="async">
         </picture>
-        <img class="wm" src="assets/enrykez-symbol-brand.png" alt="" aria-hidden="true">
+        <img class="wm" src="assets/enrykez-isotipo-positivo.svg" alt="" aria-hidden="true" width="82" height="92">
       </div>
       <div class="about-copy reveal">
         <p><span class="en">I am an Enterprise Software Architect and Digital Transformation Specialist. Over 18 years, my work has run through the financial, retail, automotive, and public sectors — from statewide tax administration platforms for Mexican state governments, to life-insurance systems for a Fortune Global 500 insurer, to ISO 8583 payment infrastructure for a NYSE-listed global payments company, to the electronic invoicing (CFDI) compliance platforms that Fortune 500 and Fortune Global 500 corporations rely on to operate in Mexico today.</span><span class="es">Soy Arquitecto de Software Empresarial y Especialista en Transformación Digital. A lo largo de 18 años, mi trabajo ha atravesado los sectores financiero, retail, automotriz y público — desde plataformas estatales de administración tributaria para gobiernos de estados mexicanos, hasta sistemas de seguros de vida para una aseguradora Fortune Global 500, infraestructura de pagos ISO 8583 para una compañía global de pagos listada en NYSE, y las plataformas de cumplimiento de facturación electrónica (CFDI) en las que corporaciones Fortune 500 y Fortune Global 500 confían hoy para operar en México.</span></p>
@@ -848,7 +851,7 @@ footer{background:var(--brand-abyss);border-top:1px solid var(--line-dark);paddi
 <footer>
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <img src="assets/enrykez-symbol-white.png" alt="Enrykez">
+      <img src="assets/enrykez-isotipo-negativo.svg" alt="Enrykez" width="23" height="26">
       <span class="wm">Enrykez</span>
       <span class="sl"><span class="en">Integrating knowledge to build the future</span><span class="es">Integrar conocimiento para construir el futuro</span></span>
     </div>
